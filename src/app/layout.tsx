@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Anek_Latin } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from '@/context/ThemeContext'
+import Provider from '@/components/Provider'
 
 const anek = Anek_Latin({ subsets: ['latin'] })
 
@@ -16,12 +16,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <ThemeProvider>
-        <body className={`dark w-screen h-screen ${anek.className}`}>
-            {children}
-        </body>
-      </ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`w-screen h-screen bg-white text-black dark:bg-black dark:text-white ${anek.className}`}>
+        <Provider>
+          {children}
+        </Provider>
+      </body>
       </html>
   )
 }

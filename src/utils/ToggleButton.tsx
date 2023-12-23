@@ -1,5 +1,3 @@
-"useclient"
-
 type ButtonProps = {
   type: "submit" | "reset" | "button",
   title?: string;
@@ -20,16 +18,16 @@ export default function ToggleButton(props:ButtonProps) {
     <button
       type={props.type}
       className={`
-          relative p-4 flex items-center text-base cursor-pointer
+          relative p-4 flex items-center text-base cursor-pointer font-varuna
           ${props.isActive ? props.setIsActiveClass : ''}
           ${props.disabled ? props.disabledClass : ''}
           ${props.className}
       `}
       aria-label={props.ariaLabel}
-      aria-braillelabel={props.title}
       title={props.title}
       role={props.type}
       disabled={props.disabled}
+      onClick={props.onClick}
     >
       {props.title}
       {props.children}

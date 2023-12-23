@@ -1,6 +1,6 @@
 "use client"
-
-import { useTheme } from "@/context/ThemeContext";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { Icon } from "@iconify/react"
 import ToggleButton from "./ToggleButton";
 
@@ -9,16 +9,32 @@ type Props = {
 }
 
 export default function ThemeButton({className}: Props) {
-  const {theme, toggleTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  function toggleTheme() {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  }
 
   return(
     <ToggleButton
-        type='button'
-        onClick={toggleTheme}
-        ariaLabel='theme change button'
-        className={`fixed top-4 right-4 rounded transition-transform ease-in-out p-2 ${theme === 'dark' ? 'hover:bg-tr-white text-white' : 'hover:bg-tr-black text-black'} ${className}`}
+      type='button'
+      ariaLabel='theme change button'
+      className={`relative rounded p-2 border border-red dark:border-green transition-transform ease-in-out duration-150
+        group: ${theme === "dark" ? "-rotate-180" : "rotate-0"}
+        ${className}
+      `}
+      onClick={toggleTheme}
     >
-        {theme === 'dark' ? <Icon icon="mingcute:sun-fill" className='text-3xl' /> : <Icon icon="mingcute:moon-fill" className='text-3xl' />}
+      {theme === "dark" ? <Icon icon="mingcute:sun-fill" className="text-2xl" /> : <Icon icon="line-md:moon-loop" className="text-2xl" />}
     </ToggleButton>
   )
 }

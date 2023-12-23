@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  darkMode: "class",
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,9 +16,16 @@ const config: Config = {
       },
     },
 
+    // backgroundImage: {
+
+    // },
+
     fontFamily: {
       taruno: [
         'Taruno Wide', "sans-serif",
+      ],
+      varuna: [
+        'Varuna', "sans-serif",
       ],
     },
 
@@ -30,7 +38,6 @@ const config: Config = {
       'green': "rgba(45, 221, 192, 1)",
     }
   },
-  darkMode: "class",
   plugins: [],
 }
 export default config
