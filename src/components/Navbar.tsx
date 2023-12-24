@@ -43,7 +43,7 @@ export default function Navbar() {
     
 
     return (
-        <nav className="fixed top-0 left-0 w-full px-6 py-2 flex items-center justify-between border-b border-b-tr-black dark:border-b-tr-white">
+        <nav className="relative w-full px-16 py-2 flex items-center justify-between border-b border-b-tr-black dark:border-b-tr-white">
             <Link href={"/"}>
                 <Image src={src} alt="Chinemerem Ichie logo" width={60} height={60} />
             </Link>

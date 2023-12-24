@@ -17,7 +17,7 @@ const config: Config = {
     },
 
     backgroundImage: {
-      'noise': "url('/noise.png')"
+      'noise': "url('/noise.png')",
     },
 
     fontFamily: {

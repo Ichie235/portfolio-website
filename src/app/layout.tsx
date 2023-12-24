@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`
-        w-screen h-screen overflow-x-hidden bg-white bg-noise text-black dark:bg-black dark:text-white transition-colors duration-100
+        relative w-screen h-screen overflow-x-hidden bg-white bg-noise text-black dark:bg-black dark:text-white transition-colors duration-100
         ${anek.className}
         scrollbar-thin scrollbar-thumb-rounded-sm scrollbar-thumb-black dark:scrollbar-thumb-white
       `}>
