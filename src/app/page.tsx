@@ -1,10 +1,10 @@
-import { HeadText } from "@/animations/HeadText";
+import Hero from "@/components/Hero";
 
 export default function Home() {
 
   return (
     <main className={`w-full h-full items-center`}>
-      <HeadText className="text-4xl font-taruno" text="Hello there" />
+      <Hero />
     </main>
   )
 }

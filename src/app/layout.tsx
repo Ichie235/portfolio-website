@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar'
 const anek = Anek_Latin({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Chinemerem portfolio',
+  title: 'Chinemerem Ichie | Portfolio',
   description: 'Chinemerem Ichie Richard portfolio',
 }
 
@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="shortcut icon" href="/chinemerem-logo-dark.png" type="image/x-icon" />
+      </head>
       <body className={`
         relative w-screen h-screen overflow-x-hidden bg-white bg-noise text-black dark:bg-black dark:text-white transition-colors duration-100
         ${anek.className}

@@ -34,9 +34,11 @@ const config: Config = {
       'tr-black': "rgba(1, 2, 3, 0.5)",
       'blue-black': "rgba(36, 39, 43, 1)",
       'red': "rgba(221, 45, 74, 1)",
+      'tr-red': "rgba(221, 45, 74, 0.5)",
       'white': "rgba(255, 254, 247 , 1)",
       'tr-white': "rgba(255, 254, 247 , 0.5)",
       'green': "rgba(45, 221, 192, 1)",
+      'tr-green': "rgba(45, 221, 192, 0.5)",
     }
   },
   plugins: [

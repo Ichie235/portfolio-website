@@ -4,3 +4,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.light{
+    --color: rgba(221, 45, 74, 1);
+}
+
+.dark{
+    --color: rgba(45, 221, 192, 1);
+}
