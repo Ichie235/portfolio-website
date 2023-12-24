@@ -28,10 +28,7 @@ export default function ThemeButton({className}: Props) {
     <ToggleButton
       type='button'
       ariaLabel='theme change button'
-      className={`relative rounded p-2 border border-red dark:border-green transition-transform ease-in-out duration-150
-        group: ${theme === "dark" ? "-rotate-180" : "rotate-0"}
-        ${className}
-      `}
+      className={`relative ${className} `}
       onClick={toggleTheme}
     >
       {theme === "dark" ? <Icon icon="mingcute:sun-fill" className="text-2xl" /> : <Icon icon="line-md:moon-loop" className="text-2xl" />}

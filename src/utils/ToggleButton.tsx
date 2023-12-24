@@ -24,7 +24,7 @@ export default function ToggleButton(props:ButtonProps) {
           ${props.className}
       `}
       aria-label={props.ariaLabel}
-      title={props.title}
+      title={props.ariaLabel}
       role={props.type}
       disabled={props.disabled}
       onClick={props.onClick}

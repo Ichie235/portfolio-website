@@ -16,9 +16,9 @@ const config: Config = {
       },
     },
 
-    // backgroundImage: {
-
-    // },
+    backgroundImage: {
+      'noise': "url('/noise.png')"
+    },
 
     fontFamily: {
       taruno: [
@@ -30,14 +30,17 @@ const config: Config = {
     },
 
     colors: {
-      'black': "rgba(36, 39, 43, 1)",
-      'tr-black': "rgba(36, 39, 43, 0.5)",
+      'black': "rgba(1, 2, 3, 1)",
+      'tr-black': "rgba(1, 2, 3, 0.5)",
+      'blue-black': "rgba(36, 39, 43, 1)",
       'red': "rgba(221, 45, 74, 1)",
       'white': "rgba(255, 254, 247 , 1)",
       'tr-white': "rgba(255, 254, 247 , 0.5)",
       'green': "rgba(45, 221, 192, 1)",
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }
 export default config
