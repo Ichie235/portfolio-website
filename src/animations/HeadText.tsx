@@ -23,7 +23,7 @@ const defaultAnimations = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.1,
+      duration: 0.05,
     },
   },
 };
@@ -70,7 +70,7 @@ export const HeadText = ({
         initial="hidden"
         animate={controls}
         variants={{
-          visible: { transition: { staggerChildren: 0.1 } },
+          visible: { transition: { staggerChildren: 0.05 } },
           hidden: {},
         }}
         aria-hidden

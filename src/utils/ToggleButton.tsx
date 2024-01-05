@@ -18,7 +18,7 @@ export default function ToggleButton(props:ButtonProps) {
     <button
       type={props.type}
       className={`
-          relative p-4 flex items-center text-base cursor-pointer font-varuna
+          relative p-2 flex items-center text-base font-varuna
           ${props.isActive ? props.setIsActiveClass : ''}
           ${props.disabled ? props.disabledClass : ''}
           ${props.className}

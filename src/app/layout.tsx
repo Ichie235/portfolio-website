@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar'
 const anek = Anek_Latin({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Chinemerem Ichie | Portfolio',
+  title: 'Chinemerem Ichie | Portfolioq',
   description: 'Chinemerem Ichie Richard portfolio',
 }
 
@@ -16,18 +16,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="shortcut icon" href="/chinemerem-logo-dark.png" type="image/x-icon" />
       </head>
       <body className={`
-        relative w-screen h-screen overflow-x-hidden bg-white bg-noise text-black dark:bg-black dark:text-white transition-colors duration-100
+        relative w-screen h-screen overflow-x-hidden bg-white bg-noise text-black dark:bg-black dark:text-white transition-colors duration-100 scroll-smooth
         ${anek.className}
         scrollbar-thin scrollbar-thumb-rounded-sm scrollbar-thumb-black dark:scrollbar-thumb-white
       `}>
         <Provider>
-          <Navbar />
+          <Navbar/>
           {children}
         </Provider>
       </body>

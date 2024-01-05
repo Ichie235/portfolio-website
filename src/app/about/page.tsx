@@ -1,3 +1,4 @@
+import { StaggerText } from "@/animations/StaggerText"
 import { Metadata } from "next"
 
 export const metadata:Metadata = {
@@ -8,8 +9,9 @@ export const metadata:Metadata = {
 
 export default function About() {
   return (
-    <main className="w-full px-16 py-4">
-        About me
+    <main className="w-full h-[200vh] px-16 py-4">
+      {/* About me */}
+      <StaggerText text="Hello there" />
     </main>
   )
 }

@@ -14,7 +14,7 @@ export const TextReveal = ({
     el: Wrapper = "p",
     text, width, once, className
 }: TextRevealProps) => {
-    const ref = useRef(null);
+    const ref = useRef<HTMLDivElement | null>(null);
     const isInView = useInView(ref, { once });
     const mainControls = useAnimation();
     const slideControls = useAnimation();
@@ -27,7 +27,15 @@ export const TextReveal = ({
     }, [isInView])
 
     return(
-        <Wrapper ref={ref} style={{position: "relative", width, overflow: "hidden"}} className={className}>
+        <Wrapper
+            ref={ref}
+            style={{
+                position: "relative", 
+                width: width, 
+                overflow: "hidden"
+            }}
+            className={className}
+        >
             <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 75 },
