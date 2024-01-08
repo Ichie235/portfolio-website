@@ -33,16 +33,16 @@ export const StaggerText = ({
             y: 0,
             transition: {
                 type: "tween",
-                stiffness: 50,
+                stiffness: 10,
             },
         },
     
         hidden: {
             opacity: 0,
-            y: 10,
+            y: 100,
             transition: {
                 type: "tween",
-                stiffness: 50,
+                stiffness: 10,
             },
         }
     }

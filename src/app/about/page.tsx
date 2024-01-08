@@ -1,5 +1,8 @@
-import { StaggerText } from "@/animations/StaggerText"
-import { Metadata } from "next"
+import AboutMe from "@/components/about/Content";
+import { Metadata } from "next";
+import Image from "next/image";
+import me from "@/assets/images/me.png";
+// import resume from "@/assets/documents/richard-resume.pdf";
 
 export const metadata:Metadata = {
     title: "Chinemerem Ichie | About",
@@ -9,9 +12,21 @@ export const metadata:Metadata = {
 
 export default function About() {
   return (
-    <main className="w-full h-[200vh] px-16 py-4">
-      {/* About me */}
-      <StaggerText text="Hello there" />
+    <main className="w-full px-16 py-4">
+      <section className="w-full flex max-md:flex-col-reverse items-start justify-between">
+        <AboutMe />
+        <aside className="flex flex-col justify-between gap-10">
+          <Image src={me} width={400} height={400} alt="Chinemerem Ichie Richard"/>
+          <a
+            href="../assets/documents/richard-resume.pdf"
+            download
+            rel="noreferrer noopener"
+            className="w-[60%] text-center self-center rounded-sm border border-red dark:border-green p-2 hover:bg-tr-black dark:hover:bg-tr-white"
+          >
+            Download my Resumé
+          </a>
+        </aside>
+      </section>
     </main>
   )
 }

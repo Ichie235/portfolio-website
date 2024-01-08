@@ -17,7 +17,7 @@ export default function Work() {
               <h4 className="font-semibold text-lg">{items.company}</h4>
               <p>{items.title}</p>
 
-              <span className="text-tr-black dark:text-tr-white italic text-sm">From {items.start} to {items.end}</span>
+              <span className="text-tr-black dark:text-tr-white text-sm">From <em>{items.start}</em> to <em>{items.end}</em></span>
             </aside>
           </span>
         ))}
@@ -42,8 +42,8 @@ const workData = [
     company: "Alt School",
     title: "Backend Developer Intern",
     link: "https://altschoolafrica.com/",
-    start: "May, 2023",
-    end: "Present",
+    start: "Nov, 2021",
+    end: "June 2023",
     image: "/alt-school.png",
   },
 ]

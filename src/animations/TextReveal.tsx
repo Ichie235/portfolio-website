@@ -11,7 +11,7 @@ type TextRevealProps = {
 }
 
 export const TextReveal = ({
-    el: Wrapper = "p",
+    el: Wrapper = "div",
     text, width, once, className
 }: TextRevealProps) => {
     const ref = useRef<HTMLDivElement | null>(null);
