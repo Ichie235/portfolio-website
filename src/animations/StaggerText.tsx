@@ -5,12 +5,12 @@ import { motion } from "framer-motion"
 type StaggerTypes = {
     text: string;
     className?: string;
-    // once?: boolean
+    once?: boolean
 }
 
 export const StaggerText = ({
     text,
-    className,
+    className, once
 }: StaggerTypes) => {
     const letters = Array.from(text)
 
@@ -23,6 +23,7 @@ export const StaggerText = ({
             transition: {
                 staggerChildren: 0.03,
                 delayChildren: 0.02 * i,
+                repeat: 1,
             }
         })
     };
@@ -51,8 +52,8 @@ export const StaggerText = ({
         <motion.div
             variants={container}
             initial="hidden"
-            // animate="visible"
             whileInView="visible"
+            viewport={{once}}
             style={{
                 overflow: "hidden",
                 display: "flex",

@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar'
 const anek = Anek_Latin({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Chinemerem Ichie | Portfolioq',
+  title: 'Chinemerem Ichie | Portfolio',
   description: 'Chinemerem Ichie Richard portfolio',
 }
 
@@ -28,7 +28,7 @@ export default function RootLayout({
         scrollbar-thin scrollbar-thumb-rounded-sm scrollbar-thumb-black dark:scrollbar-thumb-white
       `}>
         <Provider>
-          <Navbar/>
+          <Navbar />
           {children}
         </Provider>
       </body>

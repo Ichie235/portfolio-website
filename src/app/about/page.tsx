@@ -2,6 +2,7 @@ import AboutMe from "@/components/about/Content";
 import { Metadata } from "next";
 import Image from "next/image";
 import me from "@/assets/images/me.png";
+import SkillsTools from "@/components/about/SkillsTools";
 // import resume from "@/assets/documents/richard-resume.pdf";
 
 export const metadata:Metadata = {
@@ -27,6 +28,9 @@ export default function About() {
           </a>
         </aside>
       </section>
+      <br />
+      <br />
+      <SkillsTools />
     </main>
   )
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Work() {
   return (
     <section className="w-full h-[40vh]">
-      <StaggerText text="Work and Experience" className="text-3xl font-taruno font-semibold"/>
+      <StaggerText text="Work and Experience" once className="text-3xl font-taruno font-semibold"/>
 
       <aside className="w-full font-varuna flex flex-wrap items-center justify-center mt-2 mb-6">
         {workData.map((items) => (
