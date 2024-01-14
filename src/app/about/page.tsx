@@ -1,8 +1,8 @@
-import AboutMe from "../../../library/about/Content";
+import AboutMe from "../../components/about/Content";
 import { Metadata } from "next";
 import Image from "next/image";
 import me from "@/assets/images/me.png";
-import SkillsTools from "../../../library/about/SkillsTools";
+import SkillsTools from "../../components/about/SkillsTools";
 // import resume from "@/assets/documents/richard-resume.pdf";
 
 export const metadata:Metadata = {
@@ -14,7 +14,7 @@ export const metadata:Metadata = {
 export default function About() {
   return (
     <main className="w-full px-16 py-4">
-      <section className="w-full flex max-md:flex-col-reverse items-start justify-between">
+      <section className="w-full flex max-md:flex-col-reverse items-start justify-around">
         <AboutMe />
         <aside className="flex flex-col justify-between gap-10">
           <Image src={me} width={400} height={400} alt="Chinemerem Ichie Richard"/>
