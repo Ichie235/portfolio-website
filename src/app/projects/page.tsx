@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import me from "@/assets/images/me.png";
-import { project } from "../../../library/_project";
+import { project } from "../../../library/projects/_project";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="flex flex-col gap-14 max-w-7xl mx-auto md:px-12 px-4">
-      <div className="flex flex-col gap-7 mt-[7rem] max-w-2xl">
+    <main className="flex flex-col gap-14 max-w-7xl mx-auto md:px-12 px-5">
+      <div className="flex flex-col gap-7 mt-[3.5rem] md:mt-[7rem] max-w-2xl">
         <h1 className="font-taruno text-2xl sm:text-4xl lg:leading-[3.5rem]">
           Projects
         </h1>
@@ -27,10 +27,16 @@ export default function About() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-2 xl:grid-cols-3">
         {project.map((item, index) => (
-          <Link key={index} href={`/projects/${item.id}`}>
-            <div className="card card-side shadow-md bg-tr-white dark:bg-lighter-tr-black p-2 transition duration-300 ease-in-out transform hover:scale-105">
-              <figure>
-                <Image src={me} alt="Project Icons" width={80} height={80} />
+          <Link key={index} href={`/projects/${item.name}`}>
+            <div className="card card-side shadow-md bg-[#fafafa] dark:bg-lighter-tr-black px-5 transition duration-300 ease-in-out transform hover:scale-105">
+              <figure className="">
+                <Image
+                  src={me}
+                  alt="Project Icons"
+                  width={90}
+                  height={90}
+                  className="dark:bg-[#27272a] bg-[#f4f4f5] rounded-md py-2 px-1"
+                />
               </figure>
               <div className="card-body font-varuna">
                 <h2 className="card-title mt-[-1rem]">{item.name}</h2>

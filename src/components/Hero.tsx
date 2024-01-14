@@ -1,7 +1,7 @@
 "use client"
 import { HeadText } from "@/animations/HeadText";
 import { TextReveal } from "@/animations/TextReveal";
-import { socials } from "../app/_data"
+import { socials } from "../../library/_data"
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 

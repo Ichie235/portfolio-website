@@ -1,8 +1,8 @@
-import AboutMe from "@/components/about/Content";
+import AboutMe from "../../../library/about/Content";
 import { Metadata } from "next";
 import Image from "next/image";
 import me from "@/assets/images/me.png";
-import SkillsTools from "@/components/about/SkillsTools";
+import SkillsTools from "../../../library/about/SkillsTools";
 // import resume from "@/assets/documents/richard-resume.pdf";
 
 export const metadata:Metadata = {
