@@ -16,16 +16,18 @@ export const metadata: Metadata = {
 export default function About() {
   
   return (
-    <main className="w-full px-20 py-4 ">
-      <section className="w-full flex  md:flex-row max-md:flex-col-reverse items-start justify-around mt-[3rem] md:mt-[6rem]">
+    <main className="w-full px-7 overflow-x-hidden md:px-20 pt-3 pb-4 md:py-4 ">
+      <section className="w-full flex md:flex-row max-md:flex-col-reverse items-start justify-around mt-[3rem] md:mt-[6rem]">
+        <div className="w-full mt-16 md:mt-0">
         <AboutMe />
+        </div>
         <aside className="flex flex-col justify-between gap-7">
           <Image
             src={me}
             width={400}
             height={400}
             alt="Chinemerem Ichie Richard"
-            className="rounded-xl  border border-black"
+            className="rounded-xl  border border-black max-h-96 min-h-96 object-cover "
           />
           <>
             <div className="flex flex-col text-center gap-y-4">

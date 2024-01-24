@@ -3,6 +3,8 @@ import { technologies } from "./_tech";
 import { Icon } from "@iconify/react";
 import { tools } from "./_tools";
 import Image from "next/image";
+import Link from "next/link";
+
 export default function SkillsTools() {
   return (
     <section className="w-full text-lg">
@@ -15,8 +17,8 @@ export default function SkillsTools() {
           <span key={index} className="flex items-center gap-2">
             <Image
               src={items.icon}
-              width={90}
-              height={90}
+              width={85}
+              height={85}
               alt={items.name}
               loading="lazy"
               decoding="async"
@@ -24,13 +26,13 @@ export default function SkillsTools() {
               className="grayscale hover:filter-none transition-[scale, filter] duration-500 ease-in-out transform hover:scale-110"
               style={{ color: "transparent", scale: 1 }}
             />
-            <a
+            <Link
               href={items.link}
               target="_blank"
               className="hover:text-red dark:hover:text-green md:hidden"
             >
               {items.name}
-            </a>
+            </Link>
             <small className="text-tr-black dark:text-tr-white md:hidden">
               {items.title}
             </small>
@@ -49,19 +51,19 @@ export default function SkillsTools() {
           <span key={index} className="flex items-center gap-2">
             <Image
               src={items.icon}
-              width={85}
-              height={85}
+              width={75}
+              height={75}
               alt={items.name}
               className="grayscale hover:filter-none transition-[scale, filter] duration-500 ease-in-out transform hover:scale-110"
               style={{ color: "transparent", scale: 1 }}
             />
-            <a
+            <Link
               href={items.link}
               target="_blank"
               className="hover:text-red dark:hover:text-green md:hidden"
             >
               {items.name}
-            </a>
+            </Link>
             <small className="text-tr-black dark:text-tr-white md:hidden">
               {items.title}
             </small>
