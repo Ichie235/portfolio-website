@@ -28,7 +28,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-2 xl:grid-cols-3">
         {project.map((item, index) => (
           <Link key={index} href={`/projects/${item.name}`}>
-            <div className="card card-side shadow-md bg-[#fafafa] dark:bg-lighter-tr-black px-5 transition duration-300 ease-in-out transform hover:scale-105">
+            <div className="card card-side shadow-md bg-[#fafafa] dark:bg-lighter-tr-black px-3 transition duration-300 ease-in-out transform hover:scale-105">
               <figure className="">
                 <Image
                   src={me}
@@ -38,7 +38,7 @@ export default function About() {
                   className="dark:bg-[#27272a] bg-[#f4f4f5] rounded-md py-2 px-1"
                 />
               </figure>
-              <div className="card-body font-varuna">
+              <div className="card-body px-4 font-varuna">
                 <h2 className="card-title mt-[-1rem]">{item.name}</h2>
                 <p className="text-sm dark:text-neutral-300 ">
                   {item.description}

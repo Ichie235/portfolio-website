@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: [
+      "static-00.iconduck.com",
+      "raw.githubusercontent.com",
+      "titrias.com",
+      "w7.pngwing.com",
+      "cdn-icons-png.flaticon.com",
+      "cdn-icons-png.flaticon.com",
+      "uxwing.com",
+      "upload.wikimedia.org",
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

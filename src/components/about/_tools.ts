@@ -13,7 +13,7 @@ export const tools = [
     },
     {
         name: "Slack",
-        icon: "https://assets.stickpng.com/images/5cb480cd5f1b6d3fbadece79.png",
+        icon: "https://assets.stickpng.com/thumbs/5cb480b85f1b6d3fbadece78.png",
         link: "https://slack.com/",
         title: "Communication Software",
     },

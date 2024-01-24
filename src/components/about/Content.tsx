@@ -20,27 +20,27 @@ export default function AboutMe() {
 
             <TextReveal
                 text={p1}
-                className="font-varuna text-tr-black dark:text-tr-white"
+                className="font-varuna text-[#5e5f69] dark:text-tr-white"
             />
 
             <TextReveal
                 text={p2}
-                className="font-varuna text-tr-black dark:text-tr-white"
+                className="font-varuna text-[#5e5f69] dark:text-tr-white"
             />
 
             <TextReveal
                 text={p3}
-                className="font-varuna text-tr-black dark:text-tr-white"
+                className="font-varuna text-[#5e5f69] dark:text-tr-white"
             />
 
             <TextReveal
                 text={p4}
-                className="font-varuna text-tr-black dark:text-tr-white"
+                className="font-varuna text-[#5e5f69] dark:text-tr-white"
             />
 
             <TextReveal
                 text={p5}
-                className="font-varuna text-tr-black dark:text-tr-white"
+                className="font-varuna text-[#5e5f69] dark:text-tr-white"
             />
         </div>
     )
