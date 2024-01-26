@@ -47,13 +47,13 @@ const ProjectDetails = ({ params: { projectId } }: Params) => {
         />
       </div>
       <div className=" px-5 md:px-28 lg:px-44 mt-10 mb-10">
-        <h1 className=" font-varuna text-[#3f3f46] text-3xl  lg:leading-[3.5rem] font-bold">
+        <h1 className=" font-varuna text-[#3f3f46] dark:text-white text-3xl  lg:leading-[3.5rem] font-bold">
           Overview
         </h1>
         <ProjectOverview projectName={projectDetails.name} />
       </div>
       <div className="mt-5 px-5 md:px-28 lg:px-44">
-        <h1 className=" font-varuna text-[#3f3f46] text-3xl lg:leading-[3.5rem] font-bold">
+        <h1 className=" font-varuna  text-3xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
           Stack/Technology
         </h1>
         <ProjectStack projectName={projectDetails.name} />

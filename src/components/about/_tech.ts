@@ -9,7 +9,7 @@ export const technologies = [
         name: "JavaScript",
         icon: "https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png",
         link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
-        title: "Programming language"
+        title: "-Programming language"
     },
     {
         name: "TypeScript",
@@ -36,7 +36,7 @@ export const technologies = [
         title: "Styling Library"
     },
     {
-        name: "HTML",
+        name: "HTML-",
         icon: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
         link: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics",
         title: "Markup Language"

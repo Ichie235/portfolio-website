@@ -14,14 +14,13 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
-  
   return (
-    <main className="w-full px-7 overflow-x-hidden md:px-20 pt-3 pb-4 md:py-4 ">
-      <section className="w-full flex md:flex-row max-md:flex-col-reverse items-start justify-around mt-[3rem] md:mt-[6rem]">
-        <div className="w-full mt-16 md:mt-0">
-        <AboutMe />
+    <main className="w-full  px-12 overflow-x-hidden lg:px-20 xl:px-36 pt-3 pb-4 md:py-4 ">
+      <section className="w-full flex flex-col-reverse items-center lg:flex-row lg:items-start lg:justify-around  mt-[3rem] md:mt-[6rem]">
+        <div className="md:w-[70%] mt-16 md:mt-0">
+          <AboutMe />
         </div>
-        <aside className="flex flex-col justify-between gap-7">
+        <aside className="flex flex-col justify-between gap-7 md:mb-10">
           <Image
             src={me}
             width={400}
@@ -36,7 +35,7 @@ export default function About() {
                   href="https://docs.google.com/document/d/1NAvwsjQFyEy0yUauFJ9fcduJAcrIwYeyDN7hhnykLks/edit?usp=drivesdk"
                   rel="noreferrer noopener"
                   target="_blank"
-                  className="flex items-center justify-center text-center gap-x-2 basis-[90%] dark:bg-lighter-tr-black bg-tr-green border border-transparent dark:hover:border-lighter-tr-black hover:border-tr-green rounded-md py-2 text-lg font-incognito font-semibold"
+                  className="flex items-center justify-center text-center gap-x-2 basis-[90%] dark:bg-lighter-tr-black bg-[#89afce] border-transparent dark:hover:border-lighter-tr-black hover:border-tr-green rounded-md py-2 text-lg font-incognito font-semibold"
                 >
                   View Résumé{" "}
                   <svg
@@ -55,7 +54,7 @@ export default function About() {
                 </Link>
                 <Link
                   href="https://cdn.sanity.io/files/ux9nag6z/production/9be1ecab3c7eca35b27ab8831b70a7651dd949df.pdf?dl=Victor Eke-resume"
-                  className="flex items-center justify-center text-center dark:text-[#32d48b] text-secondary-color hover:underline basis-[10%] dark:bg-lighter-tr-black bg-tr-green border border-transparent dark:hover:border-tr-black hover:border-tr-green rounded-md py-3 text-lg"
+                  className="flex items-center justify-center text-center dark:text-[#32d48b] text-secondary-color hover:underline basis-[10%] dark:bg-lighter-tr-black bg-[#89afce] border border-transparent dark:hover:border-tr-black hover:border-tr-green rounded-md py-3 text-lg"
                   title="Download Resume"
                 >
                   <svg
@@ -97,8 +96,8 @@ export default function About() {
       </section>
       {/* <br />
       <br /> */}
-      <div className="w-full mt-20 px-16">
-      <SkillsTools />
+      <div className="w-full mt-16 md:mt-20  md:px-20 lg:px-16">
+        <SkillsTools isInView={true} />
       </div>
     </main>
   );

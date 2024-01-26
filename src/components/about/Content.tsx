@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutMe() {
   const title = [
-    "I'd be splicing cells,\nbut understanding 1s and 0s\n look better",
+    "I'd be splicing cells,\nbut understanding 1s and \n0s look better",
   ];
   const smallerTitle = [
     "I'd be splicing cells \nbut understanding \n1s and 0s look better",
@@ -26,56 +26,64 @@ export default function AboutMe() {
   ];
 
   return (
-    <div className="w-[50%] max-md:w-full flex flex-col gap-7">
-      <HeadText el="h1" text={title} className="hidden md:block text-2xl font-taruno" once />
-      <HeadText el="h2" text={smallerTitle} className=" w-fit text-base  font-taruno md:hidden" once />
+    <div className="w-[90%] mx-auto md:mx-0  md:w-full lg:w-[75%] max-md:w-full flex flex-col gap-7">
+      <HeadText
+        el="h1"
+        text={title}
+        className="hidden md:block text-2xl font-taruno"
+        once
+      />
+      <HeadText
+        el="h2"
+        text={smallerTitle}
+        className=" w-fit text-base  font-taruno md:hidden"
+        once
+      />
       <TextReveal
         text={p1}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className="w-[93%]  font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p2}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className="w-[93%]  font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p3}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className=" w-[93%]  font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p4}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className=" w-[93%]  font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p5}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className=" w-[93%] font-varuna text-[#5e5f69] dark:text-white"
       />
       <h2
         id="soft-skills"
         className="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-5 before:-left-4 lg:before:text-2xl before:text-xl block before:top-1/2 before:-translate-y-1/2 before:opacity-80 dark:before:text-white relative font-bold tracking-tight dark:text-white lg:text-4xl text-3xl text-[#5e5f69] mt-8 mb-4"
       >
-        <a href="#soft-skills">Soft Skills</a>
+        <a href="#soft-skills" className=" text-black dark:text-white">
+          Soft Skills
+        </a>
       </h2>
 
-      <p className="">
+      <p className=" text-[#5e5f69] dark:text-white">
         Certain skills I have picked along the way that deserves mentioning:
       </p>
-      <ul className="list-[square] mt-2 ml-5">
+      <ul className="list-[square] mt-2 ml-5  text-[#5e5f69] dark:text-white">
         <li className="mb-4">
-          <strong className="font-bold dark:text-zinc-300 text-zinc-700">
-            Attention to detail
-          </strong>
-          : I take pleasure in creating designs and UIs with careful precision,
+          <strong className="font-bold">Attention to detail</strong>: I take
+          pleasure in creating designs and UIs with careful precision,
           emphasizing quality over quantity.
         </li>
         <li className="mb-4">
-          <strong className="font-bold dark:text-zinc-300 text-zinc-700">
-            Open-source/Collaboration:
-          </strong>{" "}
-          I founded a community on GitHub called{" "}
+          <strong className="font-bold ">Open-source/Collaboration:</strong> I
+          founded a community on GitHub called{" "}
           <Link
             className="dark:text-blue-400 text-blue-500 hover:underline"
             href="https://github.com/CommunityPro"
@@ -125,7 +133,7 @@ export default function AboutMe() {
           people strong with room for growth.
         </li>
         <li className="mb-4">
-          <strong className="font-bold dark:text-zinc-300 text-zinc-700">
+          <strong className="font-bold">
             Ability to work with little supervision:{" "}
           </strong>
           I understand people are busy and would love to get things done timely,

@@ -28,7 +28,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-2 xl:grid-cols-3">
         {project.map((item, index) => (
           <Link key={index} href={`/projects/${item.name}`}>
-            <div className="card card-side shadow-md bg-[#fafafa] dark:bg-lighter-tr-black px-3 transition duration-300 ease-in-out transform hover:scale-105">
+            <div className="card card-side shadow-md bg-[#89afce] dark:bg-lighter-tr-black px-3 transition duration-300 ease-in-out transform hover:scale-105">
               <figure className="">
                 <Image
                   src={me}
