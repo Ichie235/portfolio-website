@@ -26,7 +26,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <div className="w-[90%] mx-auto md:mx-0  md:w-full lg:w-[75%] max-md:w-full flex flex-col gap-7">
+    <div className="w-full mx-auto md:mx-0  md:w-full lg:w-[75%] max-md:w-full flex flex-col gap-7">
       <HeadText
         el="h1"
         text={title}
@@ -41,27 +41,27 @@ export default function AboutMe() {
       />
       <TextReveal
         text={p1}
-        className="w-[93%]  font-varuna text-[#5e5f69] dark:text-white"
+        className="font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p2}
-        className="w-[93%]  font-varuna text-[#5e5f69] dark:text-white"
+        className="font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p3}
-        className=" w-[93%]  font-varuna text-[#5e5f69] dark:text-white"
+        className="font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p4}
-        className=" w-[93%]  font-varuna text-[#5e5f69] dark:text-white"
+        className="font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p5}
-        className=" w-[93%] font-varuna text-[#5e5f69] dark:text-white"
+        className="font-varuna text-[#5e5f69] dark:text-white"
       />
       <h2
         id="soft-skills"

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="w-full  px-12 overflow-x-hidden lg:px-20 xl:px-36 pt-3 pb-4 md:py-4 ">
+    <main className="w-full px-6 md:px-12 overflow-x-hidden lg:px-20 xl:px-36 pt-3 pb-4 md:py-4 ">
       <section className="w-full flex flex-col-reverse items-center lg:flex-row lg:items-start lg:justify-around  mt-[3rem] md:mt-[6rem]">
         <div className="md:w-[70%] mt-16 md:mt-0">
           <AboutMe />
@@ -35,7 +35,7 @@ export default function About() {
                   href="https://docs.google.com/document/d/1NAvwsjQFyEy0yUauFJ9fcduJAcrIwYeyDN7hhnykLks/edit?usp=drivesdk"
                   rel="noreferrer noopener"
                   target="_blank"
-                  className="flex items-center justify-center text-center gap-x-2 basis-[90%] dark:bg-lighter-tr-black bg-[#89afce] border-transparent dark:hover:border-lighter-tr-black hover:border-tr-green rounded-md py-2 text-lg font-incognito font-semibold"
+                  className="flex items-center justify-center text-center gap-x-2 basis-[90%] dark:bg-lighter-tr-black bg-[#e7decc] border-transparent dark:hover:border-lighter-tr-black hover:border-tr-green rounded-md py-2 text-lg font-incognito font-semibold"
                 >
                   View Résumé{" "}
                   <svg
@@ -53,8 +53,8 @@ export default function About() {
                   </svg>
                 </Link>
                 <Link
-                  href="https://cdn.sanity.io/files/ux9nag6z/production/9be1ecab3c7eca35b27ab8831b70a7651dd949df.pdf?dl=Victor Eke-resume"
-                  className="flex items-center justify-center text-center dark:text-[#32d48b] text-secondary-color hover:underline basis-[10%] dark:bg-lighter-tr-black bg-[#89afce] border border-transparent dark:hover:border-tr-black hover:border-tr-green rounded-md py-3 text-lg"
+                  href=""
+                  className="flex items-center justify-center text-center dark:text-[#32d48b] text-secondary-color hover:underline basis-[10%] dark:bg-lighter-tr-black bg-[#e7decc] border border-transparent dark:hover:border-tr-black hover:border-tr-green rounded-md py-3 text-lg"
                   title="Download Resume"
                 >
                   <svg

@@ -44,17 +44,19 @@ export default function SkillsTools({ isInView }: { isInView: boolean }) {
       <section className="w-full lg:w-[70%] md:mx-auto my-0  grid grid-cols-1 md:grid-cols-4 gap-x-3 gap-y-8  md:justify-center lg:grid-cols-5">
         {technologies.map((items, index) => (
           <span key={index} className="flex items-center gap-2">
-            <Image
-              src={items.icon}
-              width={20}
-              height={20}
-              alt={items.name}
-              className="grayscale hover:filter-none transition-[scale, filter] duration-500 ease-in-out transform hover:scale-110 md:w-16 md:h-16 lg:w-[80px] lg:h-[80px]"
-              style={{
-                scale: index === currentTechIndex ? 1.1 : 1,
-                filter: index === currentTechIndex ? "none" : "",
-              }}
-            />
+            <Link href={items.link} target="_blank" className="">
+              <Image
+                src={items.icon}
+                width={20}
+                height={20}
+                alt={items.name}
+                className="grayscale hover:filter-none transition-[scale, filter] duration-500 ease-in-out transform hover:scale-110 md:w-16 md:h-16 lg:w-[80px] lg:h-[80px]"
+                style={{
+                  scale: index === currentTechIndex ? 1.1 : 1,
+                  filter: index === currentTechIndex ? "none" : "",
+                }}
+              />
+            </Link>
             <Link
               href={items.link}
               target="_blank"
@@ -62,7 +64,7 @@ export default function SkillsTools({ isInView }: { isInView: boolean }) {
             >
               {items.name}
             </Link>
-            <small className="text-tr-black text-nowrapwrap text-xs dark:text-tr-white md:hidden">
+            <small className="text-tr-black text-nowrapwrap text-sm dark:text-tr-white md:hidden">
               {items.title}
             </small>
           </span>
@@ -75,20 +77,22 @@ export default function SkillsTools({ isInView }: { isInView: boolean }) {
         Tools
         <Icon icon="fa-solid:tools" />
       </h4>
-      <section className="w-[90%] lg:w-[70%] md:mx-auto my-0  grid grid-cols-1  gap-x-3 gap-y-8 md:grid-cols-4 justify-center lg:grid-cols-5">
+      <section className="w-[90%] lg:w-[70%] md:mx-auto my-0  grid grid-cols-1  gap-x-3 gap-y-8 md:grid-cols-4 justify-center lg:grid-cols-5 mb-1 md:mb-8">
         {tools.map((items, index) => (
           <span key={index} className="flex items-center gap-2">
-            <Image
-              src={items.icon}
-              width={20}
-              height={20}
-              alt={items.name}
-              className="grayscale hover:filter-none transition-[scale, filter] duration-500 ease-in-out transform hover:scale-110 md:w-16 md:h-16 lg:w-[75px] lg:h-[75px]"
-              style={{
-                scale: index === currentToolIndex ? 1.1 : 1,
-                filter: index === currentToolIndex ? "none" : "",
-              }}
-            />
+            <Link href={items.link} target="_blank" className="">
+              <Image
+                src={items.icon}
+                width={20}
+                height={20}
+                alt={items.name}
+                className="grayscale hover:filter-none transition-[scale, filter] duration-500 ease-in-out transform hover:scale-110 md:w-16 md:h-16 lg:w-[75px] lg:h-[75px]"
+                style={{
+                  scale: index === currentToolIndex ? 1.1 : 1,
+                  filter: index === currentToolIndex ? "none" : "",
+                }}
+              />
+            </Link>
             <Link
               href={items.link}
               target="_blank"
@@ -96,7 +100,7 @@ export default function SkillsTools({ isInView }: { isInView: boolean }) {
             >
               {items.name}
             </Link>
-            <small className="text-tr-black text-xs dark:text-tr-white md:hidden">
+            <small className="text-tr-black text-sm dark:text-tr-white md:hidden">
               {items.title}
             </small>
           </span>
