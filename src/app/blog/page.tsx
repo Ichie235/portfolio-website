@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import Explore from "../../../SVG/Explore";
-
-// import DownloadButton from "@/utils/DownloadButton";
-// import resume from "@/assets/documents/richard-resume.pdf";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Chinemerem Ichie | About",
@@ -23,13 +21,40 @@ export default function Blog() {
         </p>
         <div className="flex items-center gap-x-2 mb-8">
           <Explore />
-          <h2 className="text-xl font-varuna font-semibold tracking-tight">Explore</h2>
+          <h2 className="text-xl font-varuna font-semibold tracking-tight">
+            Explore
+          </h2>
         </div>
       </section>
       <div className="flex flex-col lg:max-w-[950px] max-w-full lg:gap-y-8 gap-y-12 mb-12">
-        <article>
-            
-        </article>
+        <div className="card lg:card-side shadow-xl border border-tr-white bg-[#f8f8f8] dark:bg-lighter-tr-black md:h-72  lg:h-64">
+          <figure>
+            <Image
+              src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
+              alt="Album"
+              width={100}
+              height={100}
+              className=" mt-6 w-[85%] h-[224px] md:mt-0 md:w-[400px] md:h-[400px] lg:w-[554.4px] lg:h-[254.4px]"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">New album is released!</h2>
+            <p>
+              Click the button to listen on Spotiwhy app. Click the button to
+              listen on Spotiwhy app. Click the button to listen on Spotiwhy
+              app.Click the button to listen on Spotiwhy app. Click the button
+              to listen on Spotiwhy app. Click the button to listen on Spotiwhy
+              app.
+            </p>
+            <p>
+              Click the button to listen on Spotiwhy app. Click the button to
+              listen on Spotiwhy app. Click the button to listen on Spotiwhy
+              app.Click the button to listen on Spotiwhy app. Click the button
+              to listen on Spotiwhy app. Click the button to listen on Spotiwhy
+              app.
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   );

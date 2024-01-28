@@ -10,9 +10,7 @@ const nextConfig = {
       "cdn-icons-png.flaticon.com",
       "uxwing.com",
       "upload.wikimedia.org",
-      "assets.stickpng.com",
-      "th.bing.com",
-      "thumbs.bfldr.com",
+      "daisyui.com",
     ],
   },
 };
