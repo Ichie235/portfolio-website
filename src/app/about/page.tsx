@@ -4,6 +4,8 @@ import Image from "next/image";
 import me from "@/assets/images/me.png";
 import SkillsTools from "../../components/about/SkillsTools";
 import Link from "next/link";
+import Download from "../../../SVG/Download";
+import Email from "../../../SVG/Email";
 // import DownloadButton from "@/utils/DownloadButton";
 // import resume from "@/assets/documents/richard-resume.pdf";
 
@@ -57,37 +59,14 @@ export default function About() {
                   className="flex items-center justify-center text-center dark:text-[#32d48b] text-secondary-color hover:underline basis-[10%] dark:bg-lighter-tr-black bg-[#e7decc] border border-transparent dark:hover:border-tr-black hover:border-tr-green rounded-md py-3 text-lg"
                   title="Download Resume"
                 >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth={0}
-                    viewBox="0 0 24 24"
-                    className="text-lg"
-                    aria-label="Download Resume"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z" />
-                  </svg>
+                  <Download />
                 </Link>
               </div>
               <Link
                 href="mailto:chinemeremichie@gmail.com"
                 className="flex items-center gap-x-2 hover:text-primary-color"
               >
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth={0}
-                  viewBox="0 0 24 24"
-                  className="text-lg"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z" />
-                </svg>
+                <Email />
                 chinemeremichie@gmail.com
               </Link>
             </div>
