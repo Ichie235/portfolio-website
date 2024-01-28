@@ -10,6 +10,7 @@ import Close from "../../SVG/Close";
 import UserPortrait from "../../SVG/UserPortrait";
 import Blog from "../../SVG/Blog";
 import Project from "../../SVG/Project";
+import Home from "../../SVG/Home";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,12 @@ export default function Navbar() {
   let src;
 
   const navItems = [
+    {
+      id: "home",
+      path: "/",
+      title: "Home",
+      icon: <Home />,
+    },
     {
       id: "about",
       path: "/about",
@@ -45,7 +52,6 @@ export default function Navbar() {
       icon: <Blog />,
     },
   ];
-
 
   switch (resolvedTheme) {
     case "light":
@@ -132,7 +138,7 @@ export default function Navbar() {
                 className={` md:hidden flex flex-col items-start gap-x-2 font-varuna font-semibold text-base dark:shadow-line-dark shadow-line-light p-4 group hover:text-red dark:hover:text-green text-black dark:text-white
                             ${
                               isActive(items.path)
-                                ? "text-red dark:text-green"
+                                ? "text-red dark:hover:text-green dark:text-green"
                                 : ""
                             }
                         `}

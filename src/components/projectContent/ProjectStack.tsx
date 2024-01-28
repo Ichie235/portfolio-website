@@ -6,12 +6,12 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
   if (projectName === "Next-jjS") {
     return (
       <>
-        <ul className="list-disc mt-5 ml-5 text-[#3f3f46] text-lg font-varuna">
+        <ul className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white  text-lg font-varuna">
           <li className="">Static Generator: VitePress</li>
           <li className="">Custom Styles: CSS</li>
           <li className="">Hosting: Vercelll</li>
         </ul>
-        <h1 className="mt-5 font-varuna text-[#3f3f46] dark:text-white text-3xl lg:leading-[3.5rem] font-bold">
+        <h1 className="mt-5 font-varuna text-[#3f3f46] dark:text-white text-lg md:text-3xl lg:leading-[3.5rem] font-bold">
           Features and Functionality
         </h1>
       </>
@@ -30,7 +30,7 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
           <li className="">Amazon S3 Buckets: Image Storage</li>
           <li className="">Cloudinary: Image Optimization</li>
         </ul>
-        <h1 className="mt-5 font-varuna text-[#3f3f46] text-3xl lg:leading-[3.5rem] font-bold">
+        <h1 className="mt-5 font-varuna text-[#3f3f46] dark:text-white text-lg md:text-3xl lg:leading-[3.5rem] font-bold">
           Features and Functionality
         </h1>
       </>

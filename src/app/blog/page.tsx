@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import Explore from "../../../SVG/Explore";
 import Image from "next/image";
-import { project } from "../../../library/projects/_project";
+import { blogPost } from "../../../library/blogPost/_blogPost";
 import Link from "next/link";
+import Clock from "../../../SVG/Clock";
+import Calender from "../../../SVG/Calender";
 
 export const metadata: Metadata = {
   title: "Chinemerem Ichie | About",
@@ -29,33 +31,32 @@ export default function Blog() {
         </div>
       </section>
       <div className="flex flex-col lg:max-w-[950px] max-w-full lg:gap-y-8 gap-y-12 mb-12">
-        {project.map((item, index) => (
-          <Link key={index} href={`/blog/${item.name}`}>
+        {blogPost.map((item, index) => (
+          <Link key={index} href={item.link} target="_blank">
             <div className="card lg:card-side shadow-xl border border-tr-white bg-[#f8f8f8] dark:bg-lighter-tr-black md:h-72  lg:h-64">
               <figure>
                 <Image
-                  src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-                  alt="Album"
+                  src={item.image}
+                  alt={item.title}
                   width={100}
                   height={100}
-                  className=" mt-6 w-[85%] h-[224px] md:mt-0 md:w-[400px] md:h-[400px] lg:w-[554.4px] lg:h-[254.4px]"
+                  className=" mt-6 w-[85%] h-[224px] md:mt-0 md:w-[400px] md:h-[400px] lg:w-[554.4px] lg:h-[254.4px] transition duration-300 ease-in-out transform hover:scale-105"
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">New album is released!</h2>
+                <h2 className="card-title">{item.title}</h2>
                 <p className="text-[#5e5f69] dark:text-white">
-                  Click the button to listen on Spotiwhy app. Click the button
-                  to listen on Spotiwhy app. Click the button to listen on
-                  Spotiwhy app.Click the button to listen on Spotiwhy app. Click
-                  the button to listen on Spotiwhy app. Click the button to
-                  listen on Spotiwhy app.
+                  {item.description}
                 </p>
-                <p className="text-[#5e5f69] dark:text-white">
-                  Click the button to listen on Spotiwhy app. Click the button
-                  to listen on Spotiwhy app. Click the button to listen on
-                  Spotiwhy app.Click the button to listen on Spotiwhy app. Click
-                  the button to listen on Spotiwhy app. Click the button to
-                  listen on Spotiwhy app.
+                <p className="text-[#5e5f69] dark:text-white flex items-center gap-4">
+                  <span className="flex gap-2 items-center">
+                    <Calender />
+                    {item.date}
+                  </span>{" "}
+                  <span className="flex gap-2 items-center">
+                    <Clock />
+                    {item.readTime}
+                  </span>
                 </p>
               </div>
             </div>
