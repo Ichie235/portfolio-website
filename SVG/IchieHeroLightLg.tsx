@@ -1,10 +1,10 @@
 import * as React from "react";
 
-function IchieHeroLightXl() {
+function IchieHeroLightLg() {
   return (
     <svg
-      width="550px"
-      height="450px"
+    width="420px"
+    height="350px"
       viewBox="0 0 1191 805"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -385,4 +385,4 @@ function IchieHeroLightXl() {
   );
 }
 
-export default IchieHeroLightXl;
+export default IchieHeroLightLg;

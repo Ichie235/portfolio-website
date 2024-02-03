@@ -7,10 +7,16 @@ import { Icon } from "@iconify/react";
 import IchieHeroXl from "../../SVG/IchieHeroXl";
 import IchieHeroLg from "../../SVG/IchieHeroLg";
 import { useTheme } from "next-themes";
+import IchieHeroLightXl from "../../SVG/IchieHeroLightXl";
+import IchieHeroLightLg from "../../SVG/IchieHeroLightLg";
+import IchieHeroSm from "../../SVG/IchieHeroSm";
 
 export default function Hero() {
   const title = ["Fullstack Software\nEngineer"];
   const about = [
+    "Hi, I am Chinemerem Ichie, a fullstack developer based in Enugu.\nI excel at creating powerful and scalable web applications for everyday use",
+  ];
+  const aboutSm = [
     "Hi, I am Chinemerem Ichie, a fullstack developer based in Enugu.\nI excel at creating powerful and scalable web applications for everyday use",
   ];
   const { resolvedTheme } = useTheme();
@@ -18,14 +24,14 @@ export default function Hero() {
   return (
     <main
       role="main"
-      className="w-full h-screen flex flex-col items-center md:gap-4 lg:items-start lg:flex-row lg:justify-between lg:px-2 xl:px-12 mt-10 "
+      className="w-full h-screen flex flex-col items-center md:gap-4 lg:items-start lg:flex-row lg:justify-between px-0 lg:px-2 xl:px-12 mt-4 md:mt-10 "
     >
-      <section className="xl:pl-5">
-        <div>
+      <section className="xl:pl-5 ">
+        <div className="w-[90%] md:w-full ">
           <HeadText
             el="pre"
             text={title}
-            className="font-taruno text-4xl dark:"
+            className="font-taruno text-base text-center  md:text-4xl dark:"
             once
           />{" "}
           <br />
@@ -33,7 +39,13 @@ export default function Hero() {
             el="pre"
             width="fit-content"
             text={about}
-            className="text-tr-black dark:text-tr-white font-varuna dark:"
+            className="hidden md:block text-tr-black dark:text-tr-white font-varuna dark:"
+          />
+          <TextReveal
+            el="pre"
+            width="fit-content"
+            text={aboutSm}
+            className="md:hidden text-tr-black text-sm dark:text-tr-white font-varuna dark:"
           />
         </div>
         <div className="relative flex items-center my-7 gap-5 flex-wrap">
@@ -50,19 +62,26 @@ export default function Hero() {
           ))}
         </div>
       </section>
-      {/* <section className="hidden xl:block px-4">
-        <IchieHeroXl />
-      </section>
-      <section className="hidden md:block xl:hidden px-7">
-        <IchieHeroLg />
-      </section> */}
       {resolvedTheme === "dark" && (
         <>
           <section className="hidden xl:block px-4">
             <IchieHeroXl />
           </section>
-          <section className="hidden md:block xl:hidden px-7">
+          <section className="hidden md:block xl:hidden">
             <IchieHeroLg />
+          </section>
+          <section className="block md:hidden w-full">
+            <IchieHeroSm />
+          </section>
+        </>
+      )}
+      {resolvedTheme === "light" && (
+        <>
+          <section className="hidden xl:block px-4">
+            <IchieHeroLightXl />
+          </section>
+          <section className="hidden md:block xl:hidden ">
+            <IchieHeroLightLg />
           </section>
         </>
       )}
