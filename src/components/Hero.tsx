@@ -6,13 +6,14 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import IchieHeroXl from "../../SVG/IchieHeroXl";
 import IchieHeroLg from "../../SVG/IchieHeroLg";
-import IchieHeroMd from "../../SVG/IchieHeroMd";
+import { useTheme } from "next-themes";
 
 export default function Hero() {
   const title = ["Fullstack Software\nEngineer"];
   const about = [
     "Hi, I am Chinemerem Ichie, a fullstack developer based in Enugu.\nI excel at creating powerful and scalable web applications for everyday use",
   ];
+  const { resolvedTheme } = useTheme();
 
   return (
     <main
@@ -49,13 +50,22 @@ export default function Hero() {
           ))}
         </div>
       </section>
-      <section className="hidden xl:block px-7">
+      {/* <section className="hidden xl:block px-4">
         <IchieHeroXl />
       </section>
       <section className="hidden md:block xl:hidden px-7">
         <IchieHeroLg />
-      </section>
-     
+      </section> */}
+      {resolvedTheme === "dark" && (
+        <>
+          <section className="hidden xl:block px-4">
+            <IchieHeroXl />
+          </section>
+          <section className="hidden md:block xl:hidden px-7">
+            <IchieHeroLg />
+          </section>
+        </>
+      )}
     </main>
   );
 }
