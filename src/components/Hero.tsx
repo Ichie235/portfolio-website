@@ -17,7 +17,7 @@ export default function Hero() {
     "Hi, I am Chinemerem Ichie, a fullstack developer based in Enugu.\nI excel at creating powerful and scalable web applications for everyday use",
   ];
   const aboutSm = [
-    "Hi, I am Chinemerem Ichie, a fullstack developer based in Enugu.\nI excel at creating powerful and scalable web applications for everyday use",
+    "Hi, I am Chinemerem Ichie, a fullstack developer based  \nin Enugu. I excel at creating powerful and scalable web applications for everyday use",
   ];
   const { resolvedTheme } = useTheme();
 
@@ -27,11 +27,11 @@ export default function Hero() {
       className="w-full h-screen flex flex-col items-center md:gap-4 lg:items-start lg:flex-row lg:justify-between px-0 lg:px-2 xl:px-12 mt-4 md:mt-10 "
     >
       <section className="xl:pl-5 ">
-        <div className="w-[90%] md:w-full ">
+        <div className="">
           <HeadText
             el="pre"
             text={title}
-            className="font-taruno text-base text-center  md:text-4xl dark:"
+            className="w-[90%] md:w-full  font-taruno text-base text-center md:text-4xl dark:"
             once
           />{" "}
           <br />
@@ -39,7 +39,7 @@ export default function Hero() {
             el="pre"
             width="fit-content"
             text={about}
-            className="hidden md:block text-tr-black dark:text-tr-white font-varuna dark:"
+            className="w-[95%] md:w-full mx-auto  hidden md:block text-tr-black dark:text-tr-white font-varuna dark:"
           />
           <TextReveal
             el="pre"
