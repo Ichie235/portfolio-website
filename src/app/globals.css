@@ -1,14 +1,43 @@
-@import url('https://fonts.cdnfonts.com/css/taruno-wide');
-@import url('https://fonts.cdnfonts.com/css/varuna');
+@import url("https://fonts.cdnfonts.com/css/taruno-wide");
+@import url("https://fonts.cdnfonts.com/css/varuna");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.light{
-    --color: rgba(221, 45, 74, 1);
+.light {
+  --color: rgba(221, 45, 74, 1);
 }
 
-.dark{
-    --color: rgba(45, 221, 192, 1);
+.dark {
+  --color: rgba(45, 221, 192, 1);
+}
+
+/* @keyframes drawPath {
+  from {
+    stroke-dashoffset: 100%;
+  }
+  to {
+    stroke-dashoffset: 0%;
+  }
+} */
+.path {
+  stroke-dasharray: 30% 5%;
+  animation: animate 200s linear infinite alternate-reverse;
+}
+
+#path2 {
+    stroke-dasharray: 80% 20%;
+    animation: animate 100s linear infinite ;
+  }
+  
+
+@keyframes animate {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: 12433.8193359375;
+  }
 }

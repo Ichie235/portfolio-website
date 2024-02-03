@@ -23,4 +23,5 @@ export const socials = [
         icon: "line-md:email",
         url: "mailto:chinemerem.ichie@avvictech.com",
     },
+    
 ]
