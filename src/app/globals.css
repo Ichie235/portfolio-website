@@ -27,10 +27,9 @@
 }
 
 #path2 {
-    stroke-dasharray: 80% 20%;
-    animation: animate 100s linear infinite ;
-  }
-  
+  stroke-dasharray: 80% 20%;
+  animation: animate 100s linear infinite;
+}
 
 @keyframes animate {
   0% {
@@ -40,4 +39,59 @@
   to {
     stroke-dashoffset: 12433.8193359375;
   }
+}
+/* Media query for Text Reveal animation */
+@media (min-width: 100px) and (max-width: 300px) {
+  .custom-work-head,
+  .custom-about-text {
+    font-size: 12px;
+    width: 98%;
+    margin: 0 8px;
+    overflow-x: scroll;
+  }
+}
+@media (min-width: 100px) and (max-width: 390px) {
+  .custom-sm {
+    display: block;
+  }
+}
+@media (min-width: 390px) and (max-width: 425px) {
+  .custom-md {
+    display: block;
+  }
+}
+@media (min-width: 426px) and (max-width: 540px) {
+  .custom-md,
+  .custom-sm {
+    display: none;
+  }
+  .custom-mdLg {
+    display: block;
+  }
+}
+@media (min-width: 541px) and (max-width: 768px) {
+  .custom-md,
+  .custom-mdLg,
+  .custom-sm {
+    display: none;
+  }
+  .custom-xl {
+    display: block;
+  }
+}
+
+/* Animation bounce */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animation-bounce {
+  animation: bounce 3s infinite;
 }

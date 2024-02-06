@@ -13,7 +13,7 @@ export const socials = [
     },
     {
         id: 3,
-        title: "Twitter [X]",
+        title: "Twitter",
         icon: "ri:twitter-x-fill",
         url: "https://twitter.com/chinemerem_rich/",
     },

@@ -29,7 +29,7 @@ const config: Config = {
       black: "rgba(1, 2, 3, 1)",
       "tr-black": "rgba(1, 2, 3, 0.5)",
       "blue-black": "rgba(36, 39, 43, 1)",
-      "lighter-tr-black":" rgba(39,39,43,.4)",
+      "lighter-tr-black": " rgba(39,39,43,.4)",
       red: "rgba(221, 45, 74, 1)",
       "tr-red": "rgba(221, 45, 74, 0.5)",
       white: "rgba(255, 254, 247 , 1)",

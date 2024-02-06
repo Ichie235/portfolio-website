@@ -36,46 +36,46 @@ export default function AboutMe() {
       <HeadText
         el="h2"
         text={smallerTitle}
-        className=" w-fit text-base  font-taruno md:hidden"
+        className="custom-about-head w-fit text-base  font-taruno md:hidden"
         once
       />
       <TextReveal
         text={p1}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className="custom-about-text font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p2}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className=" custom-about-text font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p3}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className="custom-about-text font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p4}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className="custom-about-text font-varuna text-[#5e5f69] dark:text-white"
       />
 
       <TextReveal
         text={p5}
-        className="font-varuna text-[#5e5f69] dark:text-white"
+        className="custom-about-text font-varuna text-[#5e5f69] dark:text-white"
       />
       <h2
         id="soft-skills"
         className="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-5 before:-left-4 lg:before:text-2xl before:text-xl block before:top-1/2 before:-translate-y-1/2 before:opacity-80 dark:before:text-white relative font-bold tracking-tight dark:text-white lg:text-4xl text-3xl text-[#5e5f69] mt-8 mb-4"
       >
-        <a href="#soft-skills" className=" text-black dark:text-white">
+        <a href="#soft-skills" className="custom-about-text text-black dark:text-white">
           Soft Skills
         </a>
       </h2>
 
-      <p className=" text-[#5e5f69] dark:text-white">
+      <p className="custom-about-text text-[#5e5f69] dark:text-white">
         Certain skills I have picked along the way that deserves mentioning:
       </p>
-      <ul className="list-[square] mt-2 ml-5  text-[#5e5f69] dark:text-white">
+      <ul className=" list-[square] mt-2 ml-5  text-[#5e5f69] dark:text-white">
         <li className="mb-4">
           <strong className="font-bold">Attention to detail</strong>: I take
           pleasure in creating designs and UIs with careful precision,
