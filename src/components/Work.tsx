@@ -9,17 +9,17 @@ export default function Work() {
 
       <aside className="w-full font-varuna flex flex-wrap items-center justify-center mt-2 mb-6">
         {workData.map((items) => (
-          // <span key={items.id} className="relative max-w-10 basis-1 grow flex items-start gap-4 py-6">
-          //   <Link href={items.link}>
-          //     <Image src={items.image} width={60} height={60} alt="Avvic Group"/>
-          //   </Link>
-          //   <aside>
-          //     <h4 className="font-semibold text-lg">{items.company}</h4>
-          //     <p>{items.title}</p>
+          <span key={items.id} className="relative max-w-10 basis-1 grow flex items-start gap-4 py-6">
+            <Link href={items.link}>
+              <Image src={items.image} width={60} height={60} alt="Avvic Group"/>
+            </Link>
+            <aside>
+              <h4 className="font-semibold text-lg">{items.company}</h4>
+              <p>{items.title}</p>
 
-          //     <span className="text-tr-black dark:text-tr-white text-sm">From <em>{items.start}</em> to <em>{items.end}</em></span>
-          //   </aside>
-          // </span>
+              <span className="text-tr-black dark:text-tr-white text-sm">From <em>{items.start}</em> to <em>{items.end}</em></span>
+            </aside>
+          </span>
         ))}
       </aside>
     </section>
