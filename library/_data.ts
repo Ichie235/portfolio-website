@@ -23,5 +23,11 @@ export const socials = [
         icon: "line-md:email",
         url: "mailto:chinemerem.ichie@avvictech.com",
     },
+    {
+        id: 5,
+        title: "Leetcode",
+        icon: "cib:leetcode",
+        url: "https://leetcode.com/Ichie/",
+    },
     
 ]

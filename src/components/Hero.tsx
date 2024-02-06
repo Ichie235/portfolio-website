@@ -94,7 +94,7 @@ export default function Hero() {
           <section className="hidden md:block xl:hidden animation-bounce mt-10 ">
             <IchieHeroLg />
           </section>
-          <section className="block md:hidden mt-12 transform -rotate-45 w-full">
+          <section className="block md:hidden mt-3 mb-8 transform -rotate-45 w-full">
             <IchieHeroSm />
           </section>
         </>
