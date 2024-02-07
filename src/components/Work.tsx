@@ -64,12 +64,12 @@ const workData = [
   },
   {
     id: 2,
-    company: "Alt School",
+    company: "AltSchool Africa",
     title: "Backend Developer Intern",
     link: "https://altschoolafrica.com/",
     description: "",
     start: "Nov, 2021",
     end: "June 2023",
-    image: "/alt-school.png",
+    image: "/altschool-africa.svg",
   },
 ];
