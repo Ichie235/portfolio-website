@@ -30,4 +30,5 @@ export const socials = [
         url: "https://leetcode.com/Ichie/",
     },
     
+    
 ]

@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <main
       role="main"
-      className="w-full h-[70%] flex flex-col items-center md:gap-6 lg:items-start lg:flex-row lg:justify-between px-0 lg:px-2 xl:px-12 mt-4 md:mt-10 "
+      className="w-full h-[70%] flex flex-col items-center md:gap-6 lg:items-start lg:flex-row lg:justify-between px-0  xl:px-12 mt-4 md:mt-10 "
     >
       <section className="px-2 xl:pl-5 ">
         <div className="">
@@ -91,10 +91,10 @@ export default function Hero() {
           <section className="hidden xl:block transform hover:-rotate-12 hover:-mt-10 px-4 -mt-8">
             <IchieHeroXl />
           </section>
-          <section className="hidden md:block xl:hidden animation-bounce mt-10 ">
+          <section className="hidden md:block xl:hidden animation-bounce mt-10 ml-[-17px]">
             <IchieHeroLg />
           </section>
-          <section className="block md:hidden mt-3 mb-8 transform -rotate-45 w-full">
+          <section className="block md:hidden mt-3 mb-8 transform -rotate-45 w-full px-8">
             <IchieHeroSm />
           </section>
         </>
@@ -104,10 +104,10 @@ export default function Hero() {
           <section className="hidden xl:block transform hover:-rotate-12 hover:-mt-10 px-4 -mt-8">
             <IchieHeroLightXl />
           </section>
-          <section className="hidden md:block xl:hidden -rotate-45 -mt-10">
+          <section className="hidden md:block xl:hidden  -rotate-45 -mt-20 ml-[-25px]">
             <IchieHeroLightLg />
           </section>
-          <section className="block px-3 mt-12 transform  md:hidden w-full animation-bounce">
+          <section className="block px-8 mt-24 transform  md:hidden w-full animation-bounce">
             <IchieHeroLightSm />
           </section>
         </>
