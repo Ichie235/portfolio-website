@@ -7,10 +7,10 @@ const nextConfig = {
       "titrias.com",
       "w7.pngwing.com",
       "cdn-icons-png.flaticon.com",
-      "cdn-icons-png.flaticon.com",
       "uxwing.com",
       "upload.wikimedia.org",
       "daisyui.com",
+      "images.unsplash.com",
     ],
   },
 };

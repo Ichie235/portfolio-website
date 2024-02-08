@@ -67,13 +67,17 @@ export default function AboutMe() {
         id="soft-skills"
         className="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-5 before:-left-4 lg:before:text-2xl before:text-xl block before:top-1/2 before:-translate-y-1/2 before:opacity-80 dark:before:text-white relative font-bold tracking-tight dark:text-white lg:text-4xl text-3xl text-[#5e5f69] mt-8 mb-4"
       >
-        <a href="#soft-skills" className="custom-about-text text-black dark:text-white">
+        <a
+          href="#soft-skills"
+          className="custom-about-text text-black dark:text-white"
+        >
           Soft Skills
         </a>
       </h2>
 
       <p className="custom-about-text text-[#5e5f69] dark:text-white">
-        Certain skills I have picked along the way that deserves mentioning:
+        There are specific skills I&apos;ve acquired along my journey that merit
+        recognition:
       </p>
       <ul className=" list-[square] mt-2 ml-5  text-[#5e5f69] dark:text-white">
         <li className="mb-4">
