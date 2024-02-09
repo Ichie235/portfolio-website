@@ -1,4 +1,3 @@
-"use client"
 import AboutMe from "../../components/about/Content";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -7,45 +6,15 @@ import SkillsTools from "../../components/about/SkillsTools";
 import Link from "next/link";
 import Download from "../../../SVG/Download";
 import Email from "../../../SVG/Email";
-// import DownloadButton from "@/utils/DownloadButton";
-// import resume from "@/assets/documents/richard-resume.pdf";
-import { useState } from "react";
-import axios from "axios";
 
-// export const metadata: Metadata = {
-//   title: "Chinemerem Ichie | About",
-//   // metadataBase: new URL(""),
-//   description: "This is the page where you get to know me, fully 😉",
-// };
+
+export const metadata: Metadata = {
+  title: "Chinemerem Ichie | About",
+  // metadataBase: new URL(""),
+  description: "This is the page where you get to know me, fully 😉",
+};
 
 export default function About() {
-  const [downloading, setDownloading] = useState(false);
-
-  const handleDownload = async () => {
-    try {
-      setDownloading(true);
-      const response = await axios.get("/api/download/route.ts", {
-        responseType: "blob", // Important: responseType 'blob' is needed to handle binary data (like PDF files)
-      });
-
-      // Create a temporary URL to the PDF blob
-      const url = window.URL.createObjectURL(new Blob([response.data]));
-
-      // Create a link element and click it to trigger the download
-      const link = document.createElement("a");
-      link.href = url;
-      link.setAttribute("download", "richard-resume.pdf");
-      document.body.appendChild(link);
-      link.click();
-      // Cleanup
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-      setDownloading(false);
-    } catch (error) {
-      console.error("Error occurred while downloading PDF:", error);
-      setDownloading(false);
-    }
-  };
   return (
     <main className="w-full px-6 md:px-12 overflow-x-hidden lg:px-20 xl:px-36 pt-3 pb-4 md:py-4 ">
       <section className="w-full flex flex-col-reverse items-center lg:flex-row lg:items-start lg:justify-around  mt-[3rem] md:mt-[6rem]">
@@ -87,9 +56,7 @@ export default function About() {
                 <button
                   className="flex items-center justify-center text-center dark:text-[#32d48b] text-secondary-color hover:underline basis-[10%] dark:bg-lighter-tr-black bg-[#e7decc] border border-transparent dark:hover:border-tr-black hover:border-tr-green rounded-md py-3 text-lg"
                   title="Download Resume"
-                  onClick={handleDownload} disabled={downloading}
                 >
-                   {downloading ? 'Downloading...' : 'Download PDF'}
                   <Download />
                 </button>
               </div>

@@ -13,12 +13,16 @@
     "framer-motion": "^10.16.16",
     "next": "14.0.4",
     "next-navigation": "^1.0.6",
+    "next-sanity": "^7.1.2",
     "next-themes": "^0.2.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sanity": "^3.28.0",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",
+    "@types/babel__generator": "^7.6.8",
     "@types/node": "^20",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18",
