@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import me from "@/assets/images/me.png";
+import { projectsQuery } from "../../../lib/sanity.query";
 import Link from "next/link";
 import { getProjects } from "../../../sanity/sanity-utils";
+import { sanityFetch } from "../../../lib/sanity.client";
+import { ProjectProps } from "../../../types/Project";
 
 
 export const metadata: Metadata = {
@@ -13,7 +15,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Project() {
-  const projects = await getProjects();
+  const projects: ProjectProps[] = await sanityFetch({
+    query: projectsQuery,
+    tags: ["project"],
+  });
+
   return (
     <main className="flex flex-col gap-14 max-w-7xl mx-auto md:px-12 px-5">
       <div className="flex flex-col gap-7 mt-[3.5rem] md:mt-[7rem] max-w-2xl">
@@ -29,22 +35,27 @@ export default async function Project() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-2 xl:grid-cols-3">
         {projects.map((project) => (
-          <Link key={project._id} href={`/projects/${project.name}`}>
-            <div className="card card-side shadow-md bg-[#fafafa] dark:bg-lighter-tr-black px-3 transition duration-300 ease-in-out transform hover:scale-105">
-              <figure className="">
-                <Image
-                  src={me}
-                  alt="Project Icons"
-                  width={90}
-                  height={90}
-                  className="dark:bg-[#27272a] bg-[#f4f4f5] rounded-md py-2 px-1"
-                />
-              </figure>
-              <div className="card-body px-4 font-varuna">
-                <h2 className="card-title mt-[-1rem]">{project.name}</h2>
-                <p className="text-sm dark:text-neutral-300 ">
-                  {project.overview}
-                </p>
+          <Link
+            key={project._id}
+            href={`/projects/${project.slug}`}
+            className="flex items-center gap-x-4 bg-[#fafafa] dark:bg-lighter-tr-black  border border-transparent p-4 rounded-lg"
+          >
+            {project.image && (
+              <Image
+                src={project.image}
+                alt={project.name}
+                width={100}
+                height={100}
+                className="dark:bg-[#474444] bg-[#ede9e9] rounded-md p-3 transition duration-300 ease-in-out transform hover:scale-105"
+                style={{ color: "transparent" }}
+              />
+            )}
+            <div>
+              <h2 className="text-lg tracking-wide mb-1 font-semibold">
+                {project.name}
+              </h2>
+              <div className="text-sm dark:text-white text-[#5e5f69]">
+                {project.overview}
               </div>
             </div>
           </Link>
@@ -53,3 +64,5 @@ export default async function Project() {
     </main>
   );
 }
+
+export const revalidate = 10;
