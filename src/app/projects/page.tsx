@@ -1,11 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { projectsQuery } from "../../../lib/sanity.query";
 import Link from "next/link";
-import { getProjects } from "../../../sanity/sanity-utils";
-import { sanityFetch } from "../../../lib/sanity.client";
-import { ProjectProps } from "../../../types/Project";
-
+import { ProjectProps, project } from "../../../library/projects/_project";
 
 export const metadata: Metadata = {
   title: "Chinemerem Ichie | Projects",
@@ -15,11 +11,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Project() {
-  const projects: ProjectProps[] = await sanityFetch({
-    query: projectsQuery,
-    tags: ["project"],
-  });
-
   return (
     <main className="flex flex-col gap-14 max-w-7xl mx-auto md:px-12 px-5">
       <div className="flex flex-col gap-7 mt-[3.5rem] md:mt-[7rem] max-w-2xl">
@@ -27,35 +18,34 @@ export default async function Project() {
           Projects
         </h1>
         <p className="font-varuna text-based leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Hello and welcome to my projects page! Here you&apos;ll find a curated
+          selection of projects that I&apos;ve worked on, showcasing my skills,
+          creativity, and passion for innovation. Each project represents a
+          unique journey, from conceptualization to execution. Feel free to make contributions.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-2 xl:grid-cols-3">
-        {projects.map((project) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-2 xl:grid-cols-3 ">
+        {project.map((item, index) => (
           <Link
-            key={project._id}
-            href={`/projects/${project.slug}`}
-            className="flex items-center gap-x-4 bg-[#fafafa] dark:bg-lighter-tr-black  border border-transparent p-4 rounded-lg"
+            key={index}
+            href={`/projects/${item.slug}`}
+            className="flex items-center gap-x-4 bg-[#fafafa] dark:bg-lighter-tr-black  border border-transparent px-4 py-2 rounded-lg"
           >
-            {project.image && (
-              <Image
-                src={project.image}
-                alt={project.name}
-                width={100}
-                height={100}
-                className="dark:bg-[#474444] bg-[#ede9e9] rounded-md p-3 transition duration-300 ease-in-out transform hover:scale-105"
-                style={{ color: "transparent" }}
-              />
-            )}
+            <Image
+              src={item.icon}
+              alt={item.name}
+              width={100}
+              height={100}
+              className="dark:bg-[#474444] bg-[#ede9e9] rounded-md p-3 transition duration-300 ease-in-out transform hover:scale-105"
+              style={{ color: "transparent" }}
+            />
+
             <div>
-              <h2 className="text-lg tracking-wide mb-1 font-semibold">
-                {project.name}
+              <h2 className="text-base tracking-wide mb-1 font-semibold">
+                {item.name}
               </h2>
               <div className="text-sm dark:text-white text-[#5e5f69]">
-                {project.overview}
+                {item.description}
               </div>
             </div>
           </Link>

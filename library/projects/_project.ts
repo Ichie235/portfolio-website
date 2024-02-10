@@ -1,9 +1,9 @@
 export type ProjectProps = {
   id: string;
   name: string;
+  slug: string;
   title: string;
   description: string;
-  overview: string;
   icon: string;
   image: string;
   link: string;
@@ -12,43 +12,24 @@ export type ProjectProps = {
 export const project: ProjectProps[] = [
   {
     id: "1",
-    name: "Next-jjS",
-    title: "fjfjkkd",
+    title: "Blog Wesite built using Node.js, Express and Mongodb",
+    slug: "blog-wesite",
+    name: "Blog Wesite",
     description:
-      "Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    overview:
-      "Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: "jdjdjdjjdjddjjdjdd",
-    image:
-      "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg",
-    link: "https://nextjs.org/learn/dashboard-app",
+      "This project was built with Node.js, Express and Mongodb.",
+    icon: "/blog-images/blog-picx.svg",
+    image: "/blog-images/blog-picx.svg",
+    link: "https://ichie-blogging-api.cyclic.app/",
   },
   {
     id: "2",
-    name: "Next-JS",
-    title: "fjfjkkd",
+    title: "Blog Wesite built using Node.js, Express and MONGODB",
+    slug: "blog-wesite",
+    name: "Blog Wesite",
     description:
-      "Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    overview:
-      "Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: "jdjdjdjjdjddjjdjdd",
-    image:
-      "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg",
-
-    link: "https://nextjs.org/learn/dashboard-app",
-  },
-  {
-    id: "3",
-    name: "Next-JcS",
-    title: "fjfjkkd",
-    description:
-      "Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    overview:
-      "Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: "jdjdjdjjdjddjjdjdd",
-    image:
-      "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg",
-
-    link: "https://nextjs.org/learn/dashboard-app",
+      "This project contains CRUD functionalities, authentication and EJS templating view that Node.js provides.",
+    icon: "/blog-images/blog-picx.svg",
+    image: "/blog-images/blog-picx.svg",
+    link: "https://ichie-blogging-api.cyclic.app/",
   },
 ];
