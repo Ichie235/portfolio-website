@@ -1,21 +1,59 @@
 "use client";
+import {
+  blogData,
+  linksData,
+} from "../../../library/projects/blogProject/_blogData";
+import Link from "next/link";
+
 type ProjectStackProps = {
   projectName: string;
 };
+
 const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
-  if (projectName === "Next-jjS") {
-    return (
-      <>
-        <ul className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white  text-lg font-varuna">
-          <li className="">Static Generator: VitePress</li>
-          <li className="">Custom Styles: CSS</li>
-          <li className="">Hosting: Vercelll</li>
-        </ul>
-        <h1 className="mt-5 font-varuna text-[#3f3f46] dark:text-white text-lg md:text-3xl lg:leading-[3.5rem] font-bold">
-          Features and Functionality
-        </h1>
-      </>
-    );
+  if (projectName === "blog-wesite") {
+    const blogItem = blogData.find((item) => item.id === "1");
+    if (blogItem) {
+      const entries = Object.entries(blogItem);
+      const startingIndex = Math.max(0, entries.length - 4);
+      return (
+        <>
+          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
+            Key Features:
+          </h1>
+          {entries.slice(startingIndex).map(([key, value]) => (
+            <>
+              <ul
+                className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-base md:px-4 md:text-lg "
+                key={key}
+              >
+                <li>
+                  {" "}
+                  <strong className="font-bold">{key}</strong>: {value}
+                </li>
+              </ul>
+            </>
+          ))}
+          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold mt-5">
+            Technologies:
+          </h1>
+          <ul className="list-disc mt-5 ml-5 text-[#3f3f46] gap-9 flex flex-col dark:text-white text-base md:px-4 md:text-lg ">
+            {linksData.map((link, index) => (
+              <li key={index}>
+                {" "}
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  className="font-semibold text-red dark:text-green"
+                >
+                  {link.text}
+                </Link>
+                : {link.description}
+              </li>
+            ))}
+          </ul>
+        </>
+      );
+    }
   } else if (projectName === "Next-JcS") {
     return (
       <>

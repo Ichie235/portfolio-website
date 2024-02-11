@@ -31,6 +31,7 @@ const ProjectDetails = ({ params: { projectId } }: Params) => {
         </h1>
         <Link
           href={projectDetails.link}
+          target="_blank"
           className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg dark:bg-lighter-tr-black dark:text-white bg-tr-white hover:bg-white text-black font-light"
         >
           Explore
@@ -53,10 +54,7 @@ const ProjectDetails = ({ params: { projectId } }: Params) => {
         <ProjectOverview projectName={projectDetails.slug} />
       </div>
       <div className="mt-5 px-5 md:px-28 lg:px-44">
-        <h1 className=" font-varuna text-lg md:text-3xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
-          Stack/Technology
-        </h1>
-        <ProjectStack projectName={projectDetails.name} />
+        <ProjectStack projectName={projectDetails.slug} />
       </div>
     </main>
   );

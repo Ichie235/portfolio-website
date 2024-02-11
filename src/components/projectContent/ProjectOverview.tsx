@@ -10,7 +10,7 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ projectName }) => {
     if (blogItem) {
       return (
         <>
-          <p>{blogItem.paragraph1}</p>
+          <p className="text-base md:text-lg md:px-4 ">{blogItem.paragraph1}</p>
         </>
       );
     } else {
