@@ -26,6 +26,6 @@ export const project: ProjectProps[] = [
       "Utilizing the power of Next.js, TypeScript, Tailwind, and Flutterwave API.",
     icon: "/project-images/apartment-logo.svg",
     image: "/project-images/17thapartment.webp",
-    link: "http://one7th-apartment.onrender.com/",
+    link: "https://one7th-apartment.onrender.com/",
   },
 ];
