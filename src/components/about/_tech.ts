@@ -53,12 +53,7 @@ export const technologies = [
     link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
     title: "-Programming language",
   },
-  {
-    name: "TypeScript",
-    icon: "/tech-icons/typescript.svg",
-    link: "https://www.typescriptlang.org/",
-    title: "Programing language",
-  },
+  
 //   {
 //     name: "MongoDB",
 //     icon: "/tech-icons/mongodb.png",

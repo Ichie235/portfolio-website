@@ -44,7 +44,7 @@ const ProjectDetails = ({ params: { projectId } }: Params) => {
           alt="Project Icons"
           width={285}
           height={36}
-          className="rounded-lg md:w-[75%] lg:w-[750px] md:h-[350px] w-[90%] shadow-lg"
+          className="rounded-lg md:w-[75%] lg:w-[750px] md:h-[350px] w-[90%] shadow-lg bg-cover"
         />
       </div>
       <div className=" px-5 md:px-28 lg:px-44 mt-10 mb-10">

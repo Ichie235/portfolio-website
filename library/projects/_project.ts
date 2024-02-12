@@ -2,7 +2,6 @@ export type ProjectProps = {
   id: string;
   name: string;
   slug: string;
-  title: string;
   description: string;
   icon: string;
   image: string;
@@ -12,24 +11,21 @@ export type ProjectProps = {
 export const project: ProjectProps[] = [
   {
     id: "1",
-    title: "Blog Wesite built using Node.js, Express and Mongodb",
     slug: "blog-wesite",
     name: "Blog Wesite",
-    description:
-      "This project was built with Node.js, Express and Mongodb.",
+    description: "This project was built with Node.js, Express and Mongodb.",
     icon: "/blog-images/blog-picx.svg",
     image: "/blog-images/blog-picx.svg",
     link: "https://ichie-blogging-api.cyclic.app/",
   },
   {
     id: "2",
-    title: "Blog Wesite built using Node.js, Express and MONGODB",
-    slug: "blog-wesite",
-    name: "Blog Wesite",
+    slug: "one7thapartment",
+    name: "17Th Apartment",
     description:
-      "This project contains CRUD functionalities, authentication and EJS templating view that Node.js provides.",
-    icon: "/blog-images/blog-picx.svg",
-    image: "/blog-images/blog-picx.svg",
-    link: "https://ichie-blogging-api.cyclic.app/",
+      "Utilizing the power of Next.js, TypeScript, Tailwind, and Flutterwave API.",
+    icon: "/project-images/apartment-logo.svg",
+    image: "/project-images/17thapartment.webp",
+    link: "http://one7th-apartment.onrender.com/",
   },
 ];
