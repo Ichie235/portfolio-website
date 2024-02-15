@@ -2,10 +2,11 @@ export type ApartmentWebsiteProps = {
   id: string;
   paragraph1: string;
   paragraph2?: string;
-  CRUD: string;
-  JWT: string;
-  MongoDB: string;
-  EJS: string;
+  Booking: string;
+  Service: string;
+  Reservation: string;
+  Checkout: string;
+  Cart: string;
 };
 
 export const apartmentData: ApartmentWebsiteProps[] = [
@@ -14,11 +15,15 @@ export const apartmentData: ApartmentWebsiteProps[] = [
     paragraph1:
       "17thApartment is a sophisticated web application built to streamline the booking process for luxury apartment rentals. Utilizing the power of Next.js, MongoDB integration, and Flutterwave API, 17thApartment offers users a seamless and secure platform to book their desired accommodations and services.",
     paragraph2: "",
-    CRUD: "ICHIE-BLOGGONG-API empowers users with full control over their content through Create, Read, and Search operations. It allows, users can effortlessly manage their blog entries.",
-    JWT: "Security is paramount, and with JWT web token authentication, users can trust in a secure environment for their blogging endeavors. Each user's identity is verified, ensuring only authorized access to sensitive functionalities.",
-    MongoDB:
-      "enables flexible data storage, facilitating seamless management of diverse content types.",
-    EJS: "EJS templating empowers dynamic HTML generation, facilitating reusable components and streamlined content creation.",
+    Booking:
+      "Intuitive Booking Interface with allows users to effortlessly select their desired check-in and check-out dates, along with the duration of their stay.",
+    Service:
+      "Dynamic Service Recommendations based on the type of booking selected (e.g., event, vacation, personal), 17thApartment provides tailored service recommendations. For example, event bookings may include additional security services as a default recommendation.",
+    Reservation:
+      "Reservation Flexibility allowing users to  make reservations without immediate payment. However, these reservations are valid for 24 hours, after which the booking code expires if no payment is made.",
+    Checkout:
+      "Secure Checkout Process, Integrated with Flutterwave API, 17thApartment ensures secure payment processing for users. They can make payments using various methods supported by Flutterwave, such as cards, bank transfers, and mobile wallets",
+    Cart: "Efficient Cart Management. Selected services are seamlessly added to the user's cart, where they can review and modify their choices before proceeding to checkout.",
   },
 ];
 
@@ -42,6 +47,11 @@ export const apartmentlinksData = [
     text: "TypeScript",
     href: "https://www.typescriptlang.org/",
     description: "Programing language",
+  },
+  {
+    text: "Tailwind Css",
+    href: "https://www.tailwindcss.com/",
+    description: "Styling framework",
   },
   {
     text: "Flutterwave",

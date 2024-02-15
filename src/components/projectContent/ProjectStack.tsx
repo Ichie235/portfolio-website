@@ -7,6 +7,14 @@ import {
   apartmentData,
   apartmentlinksData,
 } from "../../../library/projects/one7thapartment/_apartmentData";
+import {
+  avvicBankData,
+  avvicBanklinksData,
+} from "../../../library/projects/avvicBankProject/_avvicBankData";
+import {
+  ecommerceData,
+  ecommercelinksData,
+} from "../../../library/projects/ecommerceProject/_ecommerceData";
 import Link from "next/link";
 
 type ProjectStackProps = {
@@ -62,7 +70,7 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
     const apartmentItem = apartmentData.find((item) => item.id === "1");
     if (apartmentItem) {
       const entries = Object.entries(apartmentItem);
-      const startingIndex = Math.max(0, entries.length - 4);
+      const startingIndex = Math.max(0, entries.length - 5);
       return (
         <>
           <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
@@ -102,22 +110,94 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
         </>
       );
     }
-  } else if (projectName === "Next-JS") {
-    return (
-      <>
-        <ul className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-lg font-varuna">
-          <li className="">Nextjs: UI Framework</li>
-          <li className="">Tailwind CSS: A utility-first CSS framework</li>
-          <li className="">Vercel: Hosting and Deployment</li>
-          <li className="">Google Maps: Property Location and Markers</li>
-          <li className="">Leaflet: Property Location and Markers</li>
-          <li className="">Nodejs: Backend</li>
-        </ul>
-        <h1 className="mt-5 font-varuna text-[#3f3f46] dark:text-white text-3xl lg:leading-[3.5rem] font-bold">
-          Features and Functionality
-        </h1>
-      </>
-    );
+  } else if (projectName === "avvic-bank") {
+    const avvicBankItem = avvicBankData.find((item) => item.id === "1");
+    if (avvicBankItem) {
+      const entries = Object.entries(avvicBankItem);
+      const startingIndex = Math.max(0, entries.length - 6);
+      return (
+        <>
+          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
+            Key Features:
+          </h1>
+          {entries.slice(startingIndex).map(([key, value]) => (
+            <>
+              <ul
+                className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-base md:px-4 md:text-lg "
+                key={key}
+              >
+                <li>
+                  {" "}
+                  <strong className="font-bold">{key}</strong>: {value}
+                </li>
+              </ul>
+            </>
+          ))}
+          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold mt-5">
+            Technologies:
+          </h1>
+          <ul className="list-disc mt-5 ml-5 text-[#3f3f46] gap-9 flex flex-col dark:text-white text-base md:px-4 md:text-lg ">
+            {avvicBanklinksData.map((link, index) => (
+              <li key={index}>
+                {" "}
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  className="font-semibold text-red dark:text-green"
+                >
+                  {link.text}
+                </Link>
+                : {link.description}
+              </li>
+            ))}
+          </ul>
+        </>
+      );
+    }
+  } else if (projectName === "ecommerce") {
+    const ecommerceItem = ecommerceData.find((item) => item.id === "1");
+    if (ecommerceItem) {
+      const entries = Object.entries(ecommerceItem);
+      const startingIndex = Math.max(0, entries.length - 4);
+      return (
+        <>
+          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
+            Key Features:
+          </h1>
+          {entries.slice(startingIndex).map(([key, value]) => (
+            <>
+              <ul
+                className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-base md:px-4 md:text-lg "
+                key={key}
+              >
+                <li>
+                  {" "}
+                  <strong className="font-bold">{key}</strong>: {value}
+                </li>
+              </ul>
+            </>
+          ))}
+          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold mt-5">
+            Technologies:
+          </h1>
+          <ul className="list-disc mt-5 ml-5 text-[#3f3f46] gap-9 flex flex-col dark:text-white text-base md:px-4 md:text-lg ">
+            {ecommercelinksData.map((link, index) => (
+              <li key={index}>
+                {" "}
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  className="font-semibold text-red dark:text-green"
+                >
+                  {link.text}
+                </Link>
+                : {link.description}
+              </li>
+            ))}
+          </ul>
+        </>
+      );
+    }
   } else {
     return <li className="">hello world</li>;
   }

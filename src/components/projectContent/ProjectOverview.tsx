@@ -1,6 +1,8 @@
 "use client";
 import { blogData } from "../../../library/projects/blogProject/_blogData";
 import { apartmentData } from "../../../library/projects/one7thapartment/_apartmentData";
+import { avvicBankData } from "../../../library/projects/avvicBankProject/_avvicBankData";
+import { ecommerceData } from "../../../library/projects/ecommerceProject/_ecommerceData";
 
 type ProjectOverviewProps = {
   projectName: string;
@@ -24,21 +26,25 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ projectName }) => {
         </>
       );
     }
-  } else if (projectName === "Next-JS") {
-    return (
-      <>
-        <p>
-          Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-          ep Lorem ipsum dolor sit ame Lorem ep Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.Lorem ep Lorem ipsum dolor sit ame
-        </p>
-        <p>
-          Lorem ep Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-          ep Lorem ipsum dolor sit ame Lorem ep Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.Lorem ep Lorem ipsum dolor sit ame
-        </p>
-      </>
-    );
+  } else if (projectName === "avvic-bank") {
+    const avvicBankDataItem = avvicBankData.find((item) => item.id === "1");
+    if (avvicBankDataItem) {
+      return (
+        <>
+          <p className="text-base md:text-lg md:px-4 ">{avvicBankDataItem.paragraph1}</p>
+        </>
+      );
+    }
+  } else if (projectName === "ecommerce") {
+    const ecommerceDataItem = ecommerceData.find((item) => item.id === "1");
+    if (ecommerceDataItem) {
+      return (
+        <>
+          <p className="text-base md:text-lg md:px-4 ">{ecommerceDataItem.paragraph1}</p>
+          <p className="text-base md:text-lg md:px-4 ">{ecommerceDataItem.paragraph2}</p>
+        </>
+      );
+    }
   } else {
     return <li className="">hello world</li>;
   }
