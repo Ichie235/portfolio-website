@@ -2,7 +2,7 @@
 import AboutMe from "../../components/about/Content";
 import { useState } from "react";
 import Image from "next/image";
-import me from "@/assets/images/me.png";
+import me from "@/assets/images/me.jpg";
 import SkillsTools from "../../components/about/SkillsTools";
 import Link from "next/link";
 import Download from "../../../SVG/Download";
