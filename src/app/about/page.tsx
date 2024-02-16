@@ -1,5 +1,6 @@
+"use client";
 import AboutMe from "../../components/about/Content";
-import { Metadata } from "next";
+import { useState } from "react";
 import Image from "next/image";
 import me from "@/assets/images/me.png";
 import SkillsTools from "../../components/about/SkillsTools";
@@ -7,14 +8,27 @@ import Link from "next/link";
 import Download from "../../../SVG/Download";
 import Email from "../../../SVG/Email";
 
-
-export const metadata: Metadata = {
-  title: "Chinemerem Ichie | About",
-  // metadataBase: new URL(""),
-  description: "This is the page where you get to know me, fully 😉",
-};
-
 export default function About() {
+  const [downloading, setDownloading] = useState(false);
+
+  const handleDownload = async () => {
+    setDownloading(true);
+    try {
+      const response = await fetch("/api/download");
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "richard-resume.pdf";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }
+    } finally {
+      setDownloading(false);
+    }
+  };
   return (
     <main className="w-full px-6 md:px-12 overflow-x-hidden lg:px-20 xl:px-36 pt-3 pb-4 md:py-4 ">
       <section className="w-full flex flex-col-reverse items-center lg:flex-row lg:items-start lg:justify-around  mt-[3rem] md:mt-[6rem]">
@@ -56,8 +70,10 @@ export default function About() {
                 <button
                   className="flex items-center justify-center text-center dark:text-[#32d48b] text-secondary-color hover:underline basis-[10%] dark:bg-lighter-tr-black bg-[#e7decc] border border-transparent dark:hover:border-tr-black hover:border-tr-green rounded-md py-3 text-lg"
                   title="Download Resume"
+                  onClick={handleDownload}
+                  disabled={downloading}
                 >
-                  <Download />
+                  {downloading ? "..." : <Download />}
                 </button>
               </div>
               <Link
