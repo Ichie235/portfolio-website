@@ -15,6 +15,10 @@ import {
   ecommerceData,
   ecommercelinksData,
 } from "../../../library/projects/ecommerceProject/_ecommerceData";
+import {
+  restaurantData,
+  restaurantlinksData,
+} from "../../../library/projects/restaurantProject/_restaurantProjectData";
 import Link from "next/link";
 
 type ProjectStackProps = {
@@ -198,8 +202,52 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
         </>
       );
     }
+  } else if (projectName === "restaurant-website") {
+    const restaurantItem = restaurantData.find((item) => item.id === "1");
+    if (restaurantItem) {
+      const entries = Object.entries(restaurantItem);
+      const startingIndex = Math.max(0, entries.length - 4);
+      return (
+        <>
+          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
+            Key Features:
+          </h1>
+          {entries.slice(startingIndex).map(([key, value]) => (
+            <>
+              <ul
+                className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-base md:px-4 md:text-lg "
+                key={key}
+              >
+                <li>
+                  {" "}
+                  <strong className="font-bold">{key}</strong>: {value}
+                </li>
+              </ul>
+            </>
+          ))}
+          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold mt-5">
+            Technologies:
+          </h1>
+          <ul className="list-disc mt-5 ml-5 text-[#3f3f46] gap-9 flex flex-col dark:text-white text-base md:px-4 md:text-lg ">
+            {restaurantlinksData.map((link, index) => (
+              <li key={index}>
+                {" "}
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  className="font-semibold text-red dark:text-green"
+                >
+                  {link.text}
+                </Link>
+                : {link.description}
+              </li>
+            ))}
+          </ul>
+        </>
+      );
+    }
   } else {
-    return <li className="">hello world</li>;
+    return <li className="">Content not found</li>;
   }
 };
 

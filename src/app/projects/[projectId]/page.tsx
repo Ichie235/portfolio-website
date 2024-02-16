@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { project, ProjectProps } from "../../../../library/projects/_project";
-import me from "@/assets/images/me.png";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import ProjectStack from "@/components/projectContent/ProjectStack";

@@ -54,8 +54,8 @@ export const project: ProjectProps[] = [
     name: "Restaurant Website",
     description:
       "This project was built with Next.Js, Tailwindcss, Prisma, Mongodb and JWT authentication.",
-    icon: "/avvic-icon.png",
-    image: "/project-images/avvic-bank-pix.png",
-    link: "https://avvicbank.com/",
+    icon:"/project-images/restaurant-logo.png",
+    image: "/project-images/restaurant-image.png",
+    link: "https://restaurant-website-3pnw.onrender.com/",
   },
 ];

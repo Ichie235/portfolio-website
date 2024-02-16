@@ -3,6 +3,7 @@ import { blogData } from "../../../library/projects/blogProject/_blogData";
 import { apartmentData } from "../../../library/projects/one7thapartment/_apartmentData";
 import { avvicBankData } from "../../../library/projects/avvicBankProject/_avvicBankData";
 import { ecommerceData } from "../../../library/projects/ecommerceProject/_ecommerceData";
+import { restaurantData } from "../../../library/projects/restaurantProject/_restaurantProjectData";
 
 type ProjectOverviewProps = {
   projectName: string;
@@ -16,13 +17,15 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ projectName }) => {
           <p className="text-base md:text-lg md:px-4 ">{blogItem.paragraph1}</p>
         </>
       );
-    } 
-  } else if (projectName ==="one7thapartment") {
+    }
+  } else if (projectName === "one7thapartment") {
     const apartmentItem = apartmentData.find((item) => item.id === "1");
     if (apartmentItem) {
       return (
         <>
-          <p className="text-base md:text-lg md:px-4 ">{apartmentItem.paragraph1}</p>
+          <p className="text-base md:text-lg md:px-4 ">
+            {apartmentItem.paragraph1}
+          </p>
         </>
       );
     }
@@ -31,7 +34,9 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ projectName }) => {
     if (avvicBankDataItem) {
       return (
         <>
-          <p className="text-base md:text-lg md:px-4 ">{avvicBankDataItem.paragraph1}</p>
+          <p className="text-base md:text-lg md:px-4 ">
+            {avvicBankDataItem.paragraph1}
+          </p>
         </>
       );
     }
@@ -40,13 +45,31 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ projectName }) => {
     if (ecommerceDataItem) {
       return (
         <>
-          <p className="text-base md:text-lg md:px-4 ">{ecommerceDataItem.paragraph1}</p>
-          <p className="text-base md:text-lg md:px-4 ">{ecommerceDataItem.paragraph2}</p>
+          <p className="text-base md:text-lg md:px-4 ">
+            {ecommerceDataItem.paragraph1}
+          </p>
+          <p className="text-base md:text-lg md:px-4 ">
+            {ecommerceDataItem.paragraph2}
+          </p>
+        </>
+      );
+    }
+  } else if (projectName === "restaurant-website") {
+    const restaurantDataItem = restaurantData.find((item) => item.id === "1");
+    if (restaurantDataItem) {
+      return (
+        <>
+          <p className="text-base md:text-lg md:px-4 ">
+            {restaurantDataItem.paragraph1}
+          </p>
+          <p className="text-base md:text-lg md:px-4 ">
+            {restaurantDataItem.paragraph2}
+          </p>
         </>
       );
     }
   } else {
-    return <li className="">hello world</li>;
+    return <li className="">Overview not found</li>;
   }
 };
 

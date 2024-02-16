@@ -55,10 +55,10 @@ export default function Navbar() {
 
   switch (resolvedTheme) {
     case "light":
-      src = "/chinemerem-logo.png";
+      src = "/logo/chinemerem-logo.png";
       break;
     case "dark":
-      src = "/chinemerem-logo-dark.png";
+      src = "/logo/chinemerem-logo-dark.png";
       break;
     default:
       src = "/chinemerem-logo.png";
