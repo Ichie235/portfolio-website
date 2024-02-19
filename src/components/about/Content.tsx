@@ -81,7 +81,7 @@ export default function AboutMe() {
       </p>
       <ul className=" list-[square] mt-2 ml-5  text-[#5e5f69] dark:text-white">
         <li className="mb-4">
-          <strong className="font-bold ">Growth Mindset:</strong> I I thrive on
+          <strong className="font-bold ">Growth Mindset:</strong> I thrive on
           delivering tasks independently, driven by a commitment to efficiency.
           Similarly, my embrace of a growth mindset propels my journey of
           self-directed growth, where challenges are opportunities for learning
