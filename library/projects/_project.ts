@@ -35,7 +35,7 @@ export const project: ProjectProps[] = [
     description:
       "Utilizing the power of React, SCSS, Routing, Node.js.",
     icon: "/avvic-icon.png",
-    image: "/project-images/avvic-bank-pix.png",
+    image: "/project-images/avvic-bank-picx.png",
     link: "https://avvicbank.com/",
   },
   {
