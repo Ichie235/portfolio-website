@@ -81,68 +81,29 @@ export default function AboutMe() {
       </p>
       <ul className=" list-[square] mt-2 ml-5  text-[#5e5f69] dark:text-white">
         <li className="mb-4">
-          <strong className="font-bold">Attention to detail</strong>: I take
-          pleasure in creating designs and UIs with careful precision,
-          emphasizing quality over quantity.
-        </li>
-        <li className="mb-4">
-          <strong className="font-bold ">Open-source/Collaboration:</strong> I
-          founded a community on GitHub called{" "}
-          <Link
-            className="dark:text-blue-400 text-blue-500 hover:underline"
-            href="https://github.com/CommunityPro"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            Communitypro{" "}
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth={0}
-              viewBox="0 0 24 24"
-              className="inline"
-              aria-hidden="true"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z" />
-              <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z" />
-            </svg>
-          </Link>{" "}
-          that helps newbie developers learn how to contribute to open-source
-          projects and collaborate in building together. Currently we are over{" "}
-          <Link
-            className="dark:text-blue-400 text-blue-500 hover:underline"
-            href="https://github.com/orgs/CommunityPro/people"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            400{" "}
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth={0}
-              viewBox="0 0 24 24"
-              className="inline"
-              aria-hidden="true"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z" />
-              <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z" />
-            </svg>
-          </Link>{" "}
-          people strong with room for growth.
+          <strong className="font-bold ">Growth Mindset:</strong> I I thrive on
+          delivering tasks independently, driven by a commitment to efficiency.
+          Similarly, my embrace of a growth mindset propels my journey of
+          self-directed growth, where challenges are opportunities for learning
+          and setbacks fuel resilience. With a dedication to continuous
+          improvement, I contribute autonomously while fostering innovation
+          within the team.
         </li>
         <li className="mb-4">
           <strong className="font-bold">
             Ability to work with little supervision:{" "}
           </strong>
-          I understand people are busy and would love to get things done timely,
-          so I do my best in delivering assignments and projects with little
-          supervision, sparing you the need to closely manage/oversee my work.
+          I&apos;m all about rocking tasks with minimal hand-holding. From start
+          to finish. No need for micromanaging here – I&apos;ve got it covered!
+        </li>
+        <li className="mb-4">
+          <strong className="font-bold">Team Work: </strong>I excel in
+          collaborative environments, leveraging diverse perspectives to achieve
+          shared goals effectively. With a strong belief in the power of
+          teamwork, I actively foster open communication, trust, and synergy
+          within the team. By embracing collective success over individual
+          achievements, I contribute wholeheartedly to a positive team culture,
+          driving innovation and achieving remarkable outcomes together.
         </li>
       </ul>
     </div>
