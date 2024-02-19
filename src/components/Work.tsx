@@ -57,7 +57,8 @@ const workData = [
     company: "Avvic Groups",
     title: "Web Developer",
     link: "https://avvicgroup.com/",
-    description: "",
+    description:
+      "Web Developer. Specialized in creating scalable and responsive web application, API intergration and testing. Work with React, Javascript, Typescript, Next.Js, Node.Js, databases etc",
     start: "May, 2023",
     end: "Present",
     image: "/avvic-icon.png",
@@ -67,7 +68,8 @@ const workData = [
     company: "AltSchool Africa",
     title: "Backend Developer Intern",
     link: "https://altschoolafrica.com/",
-    description: "",
+    description:
+      "Node.js developer. Performed CRUD functionality, learnt about algorithm, databases, data manipulation using array, object and best practices in creating scalable API's etc.",
     start: "Nov, 2021",
     end: "June 2023",
     image: "/altschool-africa.svg",
