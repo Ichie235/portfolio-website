@@ -40,6 +40,7 @@ export default function About() {
             src={me}
             width={400}
             height={400}
+            priority
             alt="Chinemerem Ichie Richard"
             className="rounded-xl  border border-black max-h-96 min-h-96 object-cover "
           />

@@ -43,6 +43,7 @@ const ProjectDetails = ({ params: { projectId } }: Params) => {
           alt="Project Icons"
           width={285}
           height={36}
+          priority
           className="rounded-lg md:w-[75%] lg:w-[750px] md:h-[350px] w-[90%] shadow-lg bg-cover"
         />
       </div>
