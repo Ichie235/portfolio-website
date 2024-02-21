@@ -95,3 +95,17 @@
 .animation-bounce {
   animation: bounce 3s infinite;
 }
+
+/* Bounce back to top button */
+.bounce {
+  animation: bounceAnimation 0.5s ease infinite alternate;
+}
+
+@keyframes bounceAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}

@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Suspense } from "react";
 import Loading from "./loading";
+import BackToTopButton from "@/components/BackToTopButton";
 
 const anek = Anek_Latin({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Provider>
           <Navbar />
           <Suspense fallback={<Loading />}>{children}</Suspense>
+          <BackToTopButton />
           <Footer />
         </Provider>
       </body>
