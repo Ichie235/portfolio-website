@@ -21,7 +21,7 @@ export const socials = [
         id: 4,
         title: "Email",
         icon: "line-md:email",
-        url: "mailto:chinemerem.ichie@avvictech.com",
+        url: "mailto:chinemeremichie@gmail.com",
     },
     {
         id: 5,
