@@ -66,7 +66,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="relative w-screen px-6 md:px-16 py-2 flex items-center z-10 justify-between border-b border-b-tr-black dark:border-b-tr-white">
+    <nav className="w-screen px-6 md:px-16 py-2 flex items-center z-10 justify-between border-b border-b-tr-black dark:border-b-tr-white">
       <Link href={"/"}>
         <Image
           src={src}
@@ -112,11 +112,10 @@ export default function Navbar() {
             <Hamburger />
           </button>
         </div>
-
         <div
           className={`md:hidden ${
             isOpen
-              ? "block fixed right-0 top-0 z-10 h-full w-[88%] transform duration-[600ms] ease-[cubic-bezier(0.7,0,0,1)] dark:bg-black bg-white translate-x-0 rounded-none"
+              ? "fixed right-0 top-0 z-10 h-full w-[88%] dark:bg-black  transform duration-[800ms] ease-[cubic-bezier(0.4,0,0.6,1)] bg-white translate-x-0 rounded-none"
               : "hidden"
           }`}
         >
@@ -129,19 +128,19 @@ export default function Navbar() {
               <Close />
             </button>
           </div>
-          <nav className="flex flex-col mt-6">
+          <nav className="flex flex-col mt-6 ">
             {" "}
             {navItems.map((items) => (
               <Link
                 key={items.id}
                 href={items.path}
-                className={` md:hidden flex flex-col items-start gap-x-2 font-varuna font-semibold text-base dark:shadow-line-dark shadow-line-light p-4 group hover:text-red dark:hover:text-green text-black dark:text-white
-                            ${
-                              isActive(items.path)
-                                ? "text-red dark:hover:text-green dark:text-green"
-                                : ""
-                            }
-                        `}
+                className={`md:hidden flex flex-col items-start gap-x-2 font-varuna font-semibold text-base dark:shadow-line-dark shadow-line-light p-4 group hover:text-red dark:hover:text-green text-black dark:text-white
+                          ${
+                            isActive(items.path)
+                              ? "text-red dark:hover:text-green dark:text-green"
+                              : ""
+                          }
+                      `}
                 passHref
                 onClick={resetNavbar}
               >
