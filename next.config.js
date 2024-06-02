@@ -11,7 +11,7 @@ const nextConfig = {
       "upload.wikimedia.org",
       "daisyui.com",
       "images.unsplash.com",
-      "cdn.sanity.io"
+      "res.cloudinary.com" 
     ],
   },
 };
