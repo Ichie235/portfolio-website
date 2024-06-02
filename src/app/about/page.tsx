@@ -2,7 +2,6 @@
 import AboutMe from "../../components/about/Content";
 import { useState } from "react";
 import Image from "next/image";
-import me from "@/assets/images/me.jpg";
 import SkillsTools from "../../components/about/SkillsTools";
 import Link from "next/link";
 import Download from "../../../SVG/Download";
@@ -37,7 +36,7 @@ export default function About() {
         </div>
         <aside className="flex flex-col justify-between gap-7 md:mb-10">
           <Image
-            src={me}
+            src="https://res.cloudinary.com/dl2hqugpy/image/upload/v1717368078/My-Personal-Image/g6pmgq8ztbuntjawuvy7.jpg"
             width={400}
             height={400}
             priority
