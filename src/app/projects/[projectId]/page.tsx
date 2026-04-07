@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { project, ProjectProps } from "../../../../library/projects/_project";
 import Image from "next/image";

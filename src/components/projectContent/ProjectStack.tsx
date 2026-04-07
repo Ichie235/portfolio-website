@@ -1,259 +1,50 @@
-"use client";
-import {
-  blogData,
-  linksData,
-} from "../../../library/projects/blogProject/_blogData";
-import {
-  apartmentData,
-  apartmentlinksData,
-} from "../../../library/projects/one7thapartment/_apartmentData";
-import {
-  avvicBankData,
-  avvicBanklinksData,
-} from "../../../library/projects/avvicBankProject/_avvicBankData";
-import {
-  ecommerceData,
-  ecommercelinksData,
-} from "../../../library/projects/ecommerceProject/_ecommerceData";
-import {
-  restaurantData,
-  restaurantlinksData,
-} from "../../../library/projects/restaurantProject/_restaurantProjectData";
 import Link from "next/link";
+import { projectContentBySlug } from "../../../library/projects/_projectContent";
 
 type ProjectStackProps = {
   projectName: string;
 };
 
 const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
-  if (projectName === "blog-wesite") {
-    const blogItem = blogData.find((item) => item.id === "1");
-    if (blogItem) {
-      const entries = Object.entries(blogItem);
-      const startingIndex = Math.max(0, entries.length - 4);
-      return (
-        <>
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
-            Key Features:
-          </h1>
-          {entries.slice(startingIndex).map(([key, value]) => (
-            <>
-              <ul
-                className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-base md:px-4 md:text-lg "
-                key={key}
-              >
-                <li>
-                  {" "}
-                  <strong className="font-bold">{key}</strong>: {value}
-                </li>
-              </ul>
-            </>
-          ))}
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold mt-5">
-            Technologies:
-          </h1>
-          <ul className="list-disc mt-5 ml-5 text-[#3f3f46] gap-9 flex flex-col dark:text-white text-base md:px-4 md:text-lg ">
-            {linksData.map((link, index) => (
-              <li key={index}>
-                {" "}
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-red dark:text-green"
-                >
-                  {link.text}
-                </Link>
-                : {link.description}
-              </li>
-            ))}
-          </ul>
-        </>
-      );
-    }
-  } else if (projectName === "one7thapartment") {
-    const apartmentItem = apartmentData.find((item) => item.id === "1");
-    if (apartmentItem) {
-      const entries = Object.entries(apartmentItem);
-      const startingIndex = Math.max(0, entries.length - 5);
-      return (
-        <>
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
-            Key Features:
-          </h1>
-          {entries.slice(startingIndex).map(([key, value]) => (
-            <>
-              <ul
-                className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-base md:px-4 md:text-lg "
-                key={key}
-              >
-                <li>
-                  {" "}
-                  <strong className="font-bold">{key}</strong>: {value}
-                </li>
-              </ul>
-            </>
-          ))}
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold mt-5">
-            Technologies:
-          </h1>
-          <ul className="list-disc mt-5 ml-5 text-[#3f3f46] gap-9 flex flex-col dark:text-white text-base md:px-4 md:text-lg ">
-            {apartmentlinksData.map((link, index) => (
-              <li key={index}>
-                {" "}
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-red dark:text-green"
-                >
-                  {link.text}
-                </Link>
-                : {link.description}
-              </li>
-            ))}
-          </ul>
-        </>
-      );
-    }
-  } else if (projectName === "avvic-bank") {
-    const avvicBankItem = avvicBankData.find((item) => item.id === "1");
-    if (avvicBankItem) {
-      const entries = Object.entries(avvicBankItem);
-      const startingIndex = Math.max(0, entries.length - 6);
-      return (
-        <>
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
-            Key Features:
-          </h1>
-          {entries.slice(startingIndex).map(([key, value]) => (
-            <>
-              <ul
-                className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-base md:px-4 md:text-lg "
-                key={key}
-              >
-                <li>
-                  {" "}
-                  <strong className="font-bold">{key}</strong>: {value}
-                </li>
-              </ul>
-            </>
-          ))}
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold mt-5">
-            Technologies:
-          </h1>
-          <ul className="list-disc mt-5 ml-5 text-[#3f3f46] gap-9 flex flex-col dark:text-white text-base md:px-4 md:text-lg ">
-            {avvicBanklinksData.map((link, index) => (
-              <li key={index}>
-                {" "}
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-red dark:text-green"
-                >
-                  {link.text}
-                </Link>
-                : {link.description}
-              </li>
-            ))}
-          </ul>
-        </>
-      );
-    }
-  } else if (projectName === "ecommerce") {
-    const ecommerceItem = ecommerceData.find((item) => item.id === "1");
-    if (ecommerceItem) {
-      const entries = Object.entries(ecommerceItem);
-      const startingIndex = Math.max(0, entries.length - 4);
-      return (
-        <>
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
-            Key Features:
-          </h1>
-          {entries.slice(startingIndex).map(([key, value]) => (
-            <>
-              <ul
-                className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-base md:px-4 md:text-lg "
-                key={key}
-              >
-                <li>
-                  {" "}
-                  <strong className="font-bold">{key}</strong>: {value}
-                </li>
-              </ul>
-            </>
-          ))}
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold mt-5">
-            Technologies:
-          </h1>
-          <ul className="list-disc mt-5 ml-5 text-[#3f3f46] gap-9 flex flex-col dark:text-white text-base md:px-4 md:text-lg ">
-            {ecommercelinksData.map((link, index) => (
-              <li key={index}>
-                {" "}
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-red dark:text-green"
-                >
-                  {link.text}
-                </Link>
-                : {link.description}
-              </li>
-            ))}
-          </ul>
-        </>
-      );
-    }
-  } else if (projectName === "restaurant-website") {
-    const restaurantItem = restaurantData.find((item) => item.id === "1");
-    if (restaurantItem) {
-      const entries = Object.entries(restaurantItem);
-      const startingIndex = Math.max(0, entries.length - 4);
-      return (
-        <>
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
-            Key Features:
-          </h1>
-          {entries.slice(startingIndex).map(([key, value]) => (
-            <>
-              <ul
-                className="list-disc mt-5 ml-5 text-[#3f3f46] dark:text-white text-base md:px-4 md:text-lg "
-                key={key}
-              >
-                <li>
-                  {" "}
-                  <strong className="font-bold">{key}</strong>: {value}
-                </li>
-              </ul>
-            </>
-          ))}
-          <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold mt-5">
-            Technologies:
-          </h1>
-          <ul className="list-disc mt-5 ml-5 text-[#3f3f46] gap-9 flex flex-col dark:text-white text-base md:px-4 md:text-lg ">
-            {restaurantlinksData.map((link, index) => (
-              <li key={index}>
-                {" "}
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-red dark:text-green"
-                >
-                  {link.text}
-                </Link>
-                : {link.description}
-              </li>
-            ))}
-          </ul>
-        </>
-      );
-    }
-  } else {
-    return <li className="">Content not found</li>;
+  const projectContent = projectContentBySlug[projectName];
+
+  if (!projectContent) {
+    return <p>Content not found</p>;
   }
+
+  return (
+    <>
+      <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
+        Key Features:
+      </h1>
+      <ul className="mt-5 ml-5 list-disc text-[#3f3f46] dark:text-white md:px-4 md:text-lg">
+        {projectContent.features.map((feature) => (
+          <li key={feature.title} className="mt-5 text-base">
+            <strong className="font-bold">{feature.title}</strong>:{" "}
+            {feature.description}
+          </li>
+        ))}
+      </ul>
+      <h1 className="mt-5 font-varuna text-lg font-bold text-[#3f3f46] dark:text-white md:text-2xl lg:leading-[3.5rem]">
+        Technologies:
+      </h1>
+      <ul className="mt-5 ml-5 flex list-disc flex-col gap-9 text-[#3f3f46] dark:text-white md:px-4 md:text-lg">
+        {projectContent.technologies.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-red dark:text-green"
+            >
+              {link.text}
+            </Link>
+            : {link.description}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 };
 
 export default ProjectStack;

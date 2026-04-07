@@ -11,8 +11,8 @@ export type ProjectProps = {
 export const project: ProjectProps[] = [
   {
     id: "1",
-    slug: "blog-wesite",
-    name: "Blog Wesite",
+    slug: "blog-website",
+    name: "Blog Website",
     description: "This project was built with Node.js, Express and Mongodb.",
     icon: "/blog-images/blog-picx.svg",
     image: "/blog-images/blog-picx.svg",
@@ -41,7 +41,7 @@ export const project: ProjectProps[] = [
   {
     id: "4",
     slug: "ecommerce",
-    name: "Ecommerce Wesite",
+    name: "Ecommerce Website",
     description:
       "This project was built with Next.Js, Tailwindcss, Prisma, Mongodb and AuthO authentication.",
     icon: "/project-images/ecommerce-logo.png",

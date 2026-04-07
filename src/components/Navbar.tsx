@@ -86,7 +86,6 @@ export default function Navbar() {
                                 : ""
                             }
                         `}
-            passHref
           >
             {items.title}
           </Link>
@@ -138,7 +137,6 @@ export default function Navbar() {
                               : ""
                           }
                       `}
-                passHref
                 onClick={resetNavbar}
               >
                 <span className="flex gap-2 items-center">
