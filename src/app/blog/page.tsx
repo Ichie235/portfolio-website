@@ -5,12 +5,14 @@ import { blogPost } from "../../../library/blogPost/_blogPost";
 import Link from "next/link";
 import Clock from "../../../SVG/Clock";
 import Calender from "../../../SVG/Calender";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Chinemerem Ichie | Blog",
-  // metadataBase: new URL(""),
-  description: "This is the page where i post about things i have built 😉",
-};
+  description:
+    "Articles by Chinemerem Ichie about software engineering, lessons learned, and projects he has built.",
+  path: "/blog",
+});
 
 export default function Blog() {
   return (

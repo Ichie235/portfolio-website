@@ -21,8 +21,9 @@ const config: Config = {
     },
 
     fontFamily: {
-      taruno: ["Taruno Wide", "sans-serif"],
-      varuna: ["Varuna", "sans-serif"],
+      taruno: ["var(--font-heading)", "sans-serif"],
+      varuna: ["var(--font-accent)", "sans-serif"],
+      incognito: ["var(--font-accent)", "sans-serif"],
     },
 
     colors: {

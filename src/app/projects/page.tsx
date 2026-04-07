@@ -2,13 +2,14 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectProps, project } from "../../../library/projects/_project";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Chinemerem Ichie | Projects",
-  // metadataBase: new URL(""),
   description:
-    "This is the page where you get to see the projects i have done 😉",
-};
+    "Browse selected software projects by Chinemerem Ichie, including product builds, client work, and experiments.",
+  path: "/projects",
+});
 
 export default async function Project() {
   return (

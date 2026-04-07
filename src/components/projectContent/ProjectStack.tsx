@@ -15,9 +15,9 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
 
   return (
     <>
-      <h1 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
+      <h2 className="font-varuna text-lg md:text-2xl text-[#3f3f46] dark:text-white lg:leading-[3.5rem] font-bold">
         Key Features:
-      </h1>
+      </h2>
       <ul className="mt-5 ml-5 list-disc text-[#3f3f46] dark:text-white md:px-4 md:text-lg">
         {projectContent.features.map((feature) => (
           <li key={feature.title} className="mt-5 text-base">
@@ -26,9 +26,9 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
           </li>
         ))}
       </ul>
-      <h1 className="mt-5 font-varuna text-lg font-bold text-[#3f3f46] dark:text-white md:text-2xl lg:leading-[3.5rem]">
+      <h2 className="mt-5 font-varuna text-lg font-bold text-[#3f3f46] dark:text-white md:text-2xl lg:leading-[3.5rem]">
         Technologies:
-      </h1>
+      </h2>
       <ul className="mt-5 ml-5 flex list-disc flex-col gap-9 text-[#3f3f46] dark:text-white md:px-4 md:text-lg">
         {projectContent.technologies.map((link) => (
           <li key={link.href}>

@@ -53,6 +53,7 @@ const BackToTopButton: React.FC = () => {
     <div>
       {isVisible && (
         <button
+          aria-label="Back to top"
           className="backToTopBtn fixed bottom-4 right-4 z-50 bg-tr-black dark:bg-white text-white dark:text-black rounded-full w-10 h-10 flex items-center justify-center cursor-pointer transition-opacity hover:opacity-80"
           onClick={scrollToTop}
         >

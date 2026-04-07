@@ -38,8 +38,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <main
-      role="main"
+    <section
       className="w-full h-[70%] flex flex-col items-center md:gap-6 lg:items-start lg:flex-row lg:justify-between px-0  xl:px-12 mt-4 md:mt-10 "
     >
       <section className="px-2 xl:pl-5 ">
@@ -119,6 +118,6 @@ export default function Hero() {
           </section>
         </>
       )}
-    </main>
+    </section>
   );
 }
