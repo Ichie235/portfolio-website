@@ -1,3 +1,4 @@
+import type { ProjectSlug } from "./_project";
 import { blogData, linksData } from "./blogProject/_blogData";
 import {
   apartmentData,
@@ -33,18 +34,27 @@ export type ProjectContent = {
   technologies: ProjectTechnologyLink[];
 };
 
-const toOverview = (item: Record<string, string>) =>
-  [item.paragraph1, item.paragraph2].filter(Boolean);
+type ProjectContentSource = {
+  id: string;
+  paragraph1: string;
+  paragraph2?: string;
+} & Record<string, string | undefined>;
 
-const toFeatures = (item: Record<string, string>) =>
+const toOverview = (item: ProjectContentSource) =>
+  [item.paragraph1, item.paragraph2].filter(
+    (paragraph): paragraph is string => Boolean(paragraph)
+  );
+
+const toFeatures = (item: ProjectContentSource) =>
   Object.entries(item)
     .filter(([key]) => !["id", "paragraph1", "paragraph2"].includes(key))
+    .filter((entry): entry is [string, string] => Boolean(entry[1]))
     .map(([title, description]) => ({
       title,
       description,
     }));
 
-export const projectContentBySlug: Record<string, ProjectContent> = {
+export const projectContentBySlug: Record<ProjectSlug, ProjectContent> = {
   "blog-website": {
     overview: toOverview(blogData[0]),
     features: toFeatures(blogData[0]),

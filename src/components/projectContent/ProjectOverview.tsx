@@ -1,7 +1,8 @@
 import { projectContentBySlug } from "../../../library/projects/_projectContent";
+import type { ProjectSlug } from "../../../library/projects/_project";
 
 type ProjectOverviewProps = {
-  projectName: string;
+  projectName: ProjectSlug;
 };
 const ProjectOverview: React.FC<ProjectOverviewProps> = ({ projectName }) => {
   const projectContent = projectContentBySlug[projectName];

@@ -1,4 +1,4 @@
-export type BlogPostProps = {
+export type BlogPost = {
   id: string;
   title: string;
   description: string;
@@ -9,7 +9,7 @@ export type BlogPostProps = {
   liveLink?: string;
 };
 
-export const blogPost: BlogPostProps[] = [
+export const blogPost: BlogPost[] = [
   {
     id: "2",
     title: "My First Experience with useContext React.",

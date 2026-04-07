@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { projectContentBySlug } from "../../../library/projects/_projectContent";
+import type { ProjectSlug } from "../../../library/projects/_project";
 
 type ProjectStackProps = {
-  projectName: string;
+  projectName: ProjectSlug;
 };
 
 const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {

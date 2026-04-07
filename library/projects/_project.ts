@@ -1,7 +1,14 @@
+export type ProjectSlug =
+  | "blog-website"
+  | "one7thapartment"
+  | "avvic-bank"
+  | "ecommerce"
+  | "restaurant-website";
+
 export type ProjectProps = {
   id: string;
   name: string;
-  slug: string;
+  slug: ProjectSlug;
   description: string;
   icon: string;
   image: string;

@@ -1,34 +1,39 @@
-export const socials = [
-    {
-        id: 1,
-        title: "GitHub",
-        icon: "bi:github",
-        url: "https://github.com/Ichie235",
-    },
-    {
-        id: 2,
-        title: "LinkedIn",
-        icon: "devicon:linkedin",
-        url: "https://www.linkedin.com/in/chinemerem-ichie-4604ba23a/",
-    },
-    {
-        id: 3,
-        title: "Twitter",
-        icon: "ri:twitter-x-fill",
-        url: "https://twitter.com/chinemerem_rich/",
-    },
-    {
-        id: 4,
-        title: "Email",
-        icon: "line-md:email",
-        url: "mailto:chinemeremichie@gmail.com",
-    },
-    {
-        id: 5,
-        title: "Leetcode",
-        icon: "cib:leetcode",
-        url: "https://leetcode.com/Ichie/",
-    },
-    
-    
-]
+export type SocialLink = {
+  id: number;
+  title: string;
+  icon: string;
+  url: string;
+};
+
+export const socials: SocialLink[] = [
+  {
+    id: 1,
+    title: "GitHub",
+    icon: "bi:github",
+    url: "https://github.com/Ichie235",
+  },
+  {
+    id: 2,
+    title: "LinkedIn",
+    icon: "devicon:linkedin",
+    url: "https://www.linkedin.com/in/chinemerem-ichie-4604ba23a/",
+  },
+  {
+    id: 3,
+    title: "Twitter",
+    icon: "ri:twitter-x-fill",
+    url: "https://twitter.com/chinemerem_rich/",
+  },
+  {
+    id: 4,
+    title: "Email",
+    icon: "line-md:email",
+    url: "mailto:chinemeremichie@gmail.com",
+  },
+  {
+    id: 5,
+    title: "Leetcode",
+    icon: "cib:leetcode",
+    url: "https://leetcode.com/Ichie/",
+  },
+];

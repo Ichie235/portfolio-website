@@ -1,4 +1,11 @@
-export const technologies = [
+export type TechnologyItem = {
+  name: string;
+  icon: string;
+  link: string;
+  title: string;
+};
+
+export const technologies: TechnologyItem[] = [
   {
     name: "HTML",
     icon: "https://res.cloudinary.com/dl2hqugpy/image/upload/v1717366206/Tech-Icons/niyljkfngzubnmetnvas.svg",
