@@ -76,7 +76,7 @@ export default function AboutMe() {
       </h2>
 
       <p className="custom-about-text text-[#5e5f69] dark:text-white">
-        There are specific skills I&apos;ve acquired along my journey that merit
+        There are specific skills I&apos;ve developed along my journey that merit
         recognition:
       </p>
       <ul className=" list-[square] mt-2 ml-5  text-[#5e5f69] dark:text-white">
@@ -97,7 +97,7 @@ export default function AboutMe() {
           to finish. No need for micromanaging here – I&apos;ve got it covered!
         </li>
         <li className="mb-4">
-          <strong className="font-bold">Team Work: </strong>I excel in
+          <strong className="font-bold">Teamwork: </strong>I excel in
           collaborative environments, leveraging diverse perspectives to achieve
           shared goals effectively. With a strong belief in the power of
           teamwork, I actively foster open communication, trust, and synergy

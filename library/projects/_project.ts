@@ -50,7 +50,7 @@ export const project: ProjectProps[] = [
     slug: "ecommerce",
     name: "Ecommerce Website",
     description:
-      "This project was built with Next.Js, Tailwindcss, Prisma, Mongodb and AuthO authentication.",
+      "This project was built with Next.js, Tailwind CSS, Prisma, MongoDB, and Auth0 authentication.",
     icon: "/project-images/ecommerce-logo.png",
     image: "/project-images/ecommerce-dispaly.png",
     link: "https://ecommerce-website-7mh4.onrender.com/",
@@ -60,7 +60,7 @@ export const project: ProjectProps[] = [
     slug: "restaurant-website",
     name: "Restaurant Website",
     description:
-      "This project was built with Next.Js, Tailwindcss, Prisma, Mongodb and JWT authentication.",
+      "This project was built with Next.js, Tailwind CSS, Prisma, MongoDB, and JWT authentication.",
     icon:"/project-images/restaurant-logo.png",
     image: "/project-images/restaurant-image.png",
     link: "https://restaurant-website-3pnw.onrender.com/",

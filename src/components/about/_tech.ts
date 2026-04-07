@@ -25,7 +25,7 @@ export const technologies: TechnologyItem[] = [
     title: "Styling",
   },
   {
-    name: "Bootstarp",
+    name: "Bootstrap",
     icon: "https://res.cloudinary.com/dl2hqugpy/image/upload/v1717366206/Tech-Icons/mdbg5pona3ssozwmb5ef.svg",
     link: "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
     title: "CSS Framework",
@@ -58,13 +58,13 @@ export const technologies: TechnologyItem[] = [
     name: "JavaScript",
     icon: "https://res.cloudinary.com/dl2hqugpy/image/upload/v1717366206/Tech-Icons/w1yfxgjtft0oucaryjzm.svg",
     link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
-    title: "-Programming language",
+    title: "Programming language",
   },
   {
-    name: "Typescript",
+    name: "TypeScript",
     icon: "https://res.cloudinary.com/dl2hqugpy/image/upload/v1717367048/Tech-Icons/cuu8etjb4uaevjdyblwa.svg",
     link: "https://www.typescriptlang.org/docs/",
-    title: "-Scripting language",
+    title: "Programming language",
   },
   
   // {

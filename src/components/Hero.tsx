@@ -14,22 +14,9 @@ import IchieHeroLightSm from "../../SVG/IchieHeroLightSm";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const title = ["Fullstack Software\nEngineer"];
-  const about = [
-    "Hi, I am Chinemerem Ichie, a fullstack developer based in Enugu.\nI excel at creating powerful and scalable web applications for everyday use",
-  ];
-  const aboutLgSm = [
-    "Hi, I am Chinemerem Ichie, a fullstack developer based in \nEnugu. I excel at creating powerful and scalable \nweb applications for everyday use",
-  ];
-  const aboutMdSm = [
-    "Hi, I am Chinemerem Ichie, a fullstack developer \nbased in Enugu. I excel at creating powerful and \nscalable web \napplications for everyday use",
-  ];
-  const aboutXlSm = [
-    "Hi, I am Chinemerem Ichie, a fullstack developer based in \nEnugu. I excel at creating powerful and scalable web \napplications for everyday use",
-  ];
-  const aboutSm = [
-    "Hi, I am Chinemerem Ichie, a fullstack \ndeveloper based in Enugu. I excel at \ncreating powerful and scalable web \napplications for everyday use",
-  ];
+  const title = "Full-Stack Software Engineer";
+  const aboutText =
+    "Hi, I am Chinemerem Ichie, a full-stack developer based in Enugu. I excel at creating powerful and scalable web applications for everyday use.";
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -44,37 +31,16 @@ export default function Hero() {
       <section className="px-2 xl:pl-5 ">
         <div className="">
           <HeadText
-            el="pre"
+            el="h1"
             text={title}
-            className="w-[90%] md:w-full font-taruno text-base md:text-4xl"
+            className="w-[90%] max-w-xl text-balance font-taruno text-base md:w-full md:text-4xl"
             once
-          />{" "}
+          />
           <br />
           <TextReveal
-            el="pre"
-            width="fit-content"
-            text={about}
-            className="hidden md:block w-full text-tr-black dark:text-tr-white font-varuna"
-          />
-          <TextReveal
-            el="pre"
-            text={aboutXlSm}
-            className="hidden custom-xl text-tr-black text-base dark:text-tr-white font-varuna"
-          />
-          <TextReveal
-            el="pre"
-            text={aboutLgSm}
-            className="hidden custom-mdLg text-tr-black text-base dark:text-tr-white font-varuna"
-          />
-          <TextReveal
-            el="pre"
-            text={aboutMdSm}
-            className="hidden md:hidden custom-md text-tr-black text-base dark:text-tr-white font-varuna"
-          />
-          <TextReveal
-            el="pre"
-            text={aboutSm}
-            className="custom-sm md:hidden text-tr-black text-base dark:text-tr-white font-varuna"
+            el="p"
+            text={aboutText}
+            className="w-full max-w-2xl text-base leading-relaxed text-tr-black dark:text-tr-white font-varuna"
           />
         </div>
         <div className="relative flex items-center my-7 gap-2 md:gap-5 flex-wrap">

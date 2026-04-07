@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectProps, project } from "../../../library/projects/_project";
+import { project } from "../../../library/projects/_project";
 import { buildPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -26,9 +26,9 @@ export default async function Project() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-2 xl:grid-cols-3 ">
-        {project.map((item, index) => (
+        {project.map((item) => (
           <Link
-            key={index}
+            key={item.slug}
             href={`/projects/${item.slug}`}
             className="flex items-center gap-x-4 bg-[#fafafa] dark:bg-lighter-tr-black  border border-transparent px-4 py-2 rounded-lg"
           >

@@ -33,9 +33,9 @@ export default function Blog() {
         </div>
       </section>
       <div className="flex flex-col lg:max-w-[950px] max-w-full lg:gap-y-8 gap-y-12 mb-12">
-        {blogPost.map((item, index) => (
+        {blogPost.map((item) => (
           <Link
-            key={index}
+            key={item.id}
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"

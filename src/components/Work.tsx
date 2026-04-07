@@ -12,8 +12,8 @@ export default function Work() {
       />
 
       <aside className="grid md:grid-cols-2 grid-cols-1 gap-x-12 gap-y-10 px-3 lg:px-2 xl:px-6 mt-12">
-        {workData.map((items, index) => (
-          <div key={index} className="">
+        {workData.map((items) => (
+          <div key={items.id} className="">
             <div className="flex items-start font-varuna lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[5rem] before:left-9 before:w-[1px] before:h-[calc(100%-70px)] dark:before:bg-[#2DDDC0] before:bg-tr-red">
               <Link
                 href={items.link}
@@ -59,7 +59,7 @@ const workData = [
     title: "Web Developer",
     link: "https://avvicgroup.com/",
     description:
-      "Web Developer. Specialized in creating scalable and responsive web application, API intergration and testing. Work with React, Javascript, Typescript, Next.Js, Node.Js, databases etc",
+      "Web developer specializing in scalable and responsive web applications, API integration, and testing. Worked with React, JavaScript, TypeScript, Next.js, Node.js, and databases.",
     start: "May, 2023",
     end: "Present",
     image: "/avvic-icon.png",
@@ -70,7 +70,7 @@ const workData = [
     title: "Backend Developer Intern",
     link: "https://altschoolafrica.com/",
     description:
-      "Node.js developer. Performed CRUD functionality, learnt about algorithm, databases, data manipulation using array, object and best practices in creating scalable API's etc.",
+      "Node.js developer. Built CRUD functionality and learned algorithms, databases, data manipulation with arrays and objects, and best practices for creating scalable APIs.",
     start: "Nov, 2021",
     end: "June 2023",
     image: "/altschool-africa.svg",

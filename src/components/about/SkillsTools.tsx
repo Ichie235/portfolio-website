@@ -43,7 +43,7 @@ export default function SkillsTools({ isInView }: { isInView: boolean }) {
       </h4>
       <section className="w-full lg:w-[70%] md:mx-auto my-0  grid grid-cols-1 md:grid-cols-4 gap-x-3 gap-y-8  md:justify-center lg:grid-cols-5">
         {technologies.map((items, index) => (
-          <span key={index} className="flex items-center gap-2">
+          <span key={items.name} className="flex items-center gap-2">
             <Link
               href={items.link}
               target="_blank"
@@ -85,7 +85,7 @@ export default function SkillsTools({ isInView }: { isInView: boolean }) {
       </h4>
       <section className="w-[90%] lg:w-[70%] md:mx-auto my-0  grid grid-cols-1  gap-x-3 gap-y-8 md:grid-cols-4 justify-center lg:grid-cols-5 mb-1 md:mb-8">
         {tools.map((items, index) => (
-          <span key={index} className="flex items-center gap-2">
+          <span key={items.name} className="flex items-center gap-2">
             <Link
               href={items.link}
               target="_blank"
