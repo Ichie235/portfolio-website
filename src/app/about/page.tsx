@@ -28,7 +28,7 @@ export default function About() {
                   href="https://docs.google.com/document/d/1NAvwsjQFyEy0yUauFJ9fcduJAcrIwYeyDN7hhnykLks/edit?usp=drivesdk"
                   rel="noreferrer noopener"
                   target="_blank"
-                  className="flex items-center justify-center text-center gap-x-2 basis-[90%] dark:bg-lighter-tr-black bg-[#e7decc] border-transparent dark:hover:border-lighter-tr-black hover:border-tr-green rounded-md py-2 text-lg font-incognito font-semibold"
+                  className="resume-action basis-[90%] gap-x-2 border-transparent py-2 text-lg font-incognito font-semibold hover:border-tr-green dark:hover:border-lighter-tr-black"
                 >
                   View Résumé{" "}
                   <svg
@@ -48,7 +48,7 @@ export default function About() {
                 <a
                   href="/api/download"
                   download
-                  className="flex items-center justify-center text-center dark:text-[#32d48b] text-secondary-color hover:underline basis-[10%] dark:bg-lighter-tr-black bg-[#e7decc] border border-transparent dark:hover:border-tr-black hover:border-tr-green rounded-md py-3 text-lg"
+                  className="resume-action basis-[10%] border border-transparent py-3 text-lg text-secondary-color hover:underline hover:border-tr-green dark:text-[#32d48b] dark:hover:border-tr-black"
                   title="Download Resume"
                 >
                   <Download />

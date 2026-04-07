@@ -1,6 +1,5 @@
 import { HeadText } from "@/animations/HeadText";
 import { TextReveal } from "@/animations/TextReveal";
-import Link from "next/link";
 
 export default function AboutMe() {
   const title = [
@@ -41,31 +40,31 @@ export default function AboutMe() {
       />
       <TextReveal
         text={p1}
-        className="custom-about-text font-varuna text-[#5e5f69] dark:text-white"
+        className="custom-about-text text-muted font-varuna"
       />
 
       <TextReveal
         text={p2}
-        className=" custom-about-text font-varuna text-[#5e5f69] dark:text-white"
+        className="custom-about-text text-muted font-varuna"
       />
 
       <TextReveal
         text={p3}
-        className="custom-about-text font-varuna text-[#5e5f69] dark:text-white"
+        className="custom-about-text text-muted font-varuna"
       />
 
       <TextReveal
         text={p4}
-        className="custom-about-text font-varuna text-[#5e5f69] dark:text-white"
+        className="custom-about-text text-muted font-varuna"
       />
 
       <TextReveal
         text={p5}
-        className="custom-about-text font-varuna text-[#5e5f69] dark:text-white"
+        className="custom-about-text text-muted font-varuna"
       />
       <h2
         id="soft-skills"
-        className="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-5 before:-left-4 lg:before:text-2xl before:text-xl block before:top-1/2 before:-translate-y-1/2 before:opacity-80 dark:before:text-white relative font-bold tracking-tight dark:text-white lg:text-4xl text-3xl text-[#5e5f69] mt-8 mb-4"
+        className="text-muted font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-5 before:-left-4 lg:before:text-2xl before:text-xl block before:top-1/2 before:-translate-y-1/2 before:opacity-80 dark:before:text-white relative mt-8 mb-4 text-3xl font-bold tracking-tight lg:text-4xl"
       >
         <a
           href="#soft-skills"
@@ -75,11 +74,11 @@ export default function AboutMe() {
         </a>
       </h2>
 
-      <p className="custom-about-text text-[#5e5f69] dark:text-white">
+      <p className="custom-about-text text-muted">
         There are specific skills I&apos;ve developed along my journey that merit
         recognition:
       </p>
-      <ul className=" list-[square] mt-2 ml-5  text-[#5e5f69] dark:text-white">
+      <ul className="text-muted mt-2 ml-5 list-[square]">
         <li className="mb-4">
           <strong className="font-bold ">Growth Mindset:</strong> I thrive on
           delivering tasks independently, driven by a commitment to efficiency.

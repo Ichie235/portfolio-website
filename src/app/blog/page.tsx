@@ -21,7 +21,7 @@ export default function Blog() {
         <h1 className="max-w-3xl font-taruno font-semibold tracking-tight text-3xl  md:text-5xl mb-6 md:leading-[3.7rem]">
           My Blog
         </h1>
-        <p className="mb-10 max-w-2xl text-base md:text-lg text-[#5e5f69] dark:text-white leading-relaxed">
+        <p className="text-muted mb-10 max-w-2xl text-base leading-relaxed md:text-lg">
           Welcome to my blog where I share personal stories about things I have
           learned, projects I have worked on and so on.
         </p>
@@ -40,7 +40,7 @@ export default function Blog() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="card lg:card-side shadow-xl border border-tr-white bg-[#f8f8f8] dark:bg-lighter-tr-black md:h-72  lg:h-64">
+            <div className="surface-panel card border border-tr-white shadow-xl md:h-72 lg:card-side lg:h-64">
               <figure>
                 <Image
                   src={item.image}
@@ -52,10 +52,10 @@ export default function Blog() {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{item.title}</h2>
-                <p className="text-[#5e5f69] dark:text-white">
+                <p className="text-muted">
                   {item.description}
                 </p>
-                <p className="text-[#5e5f69] dark:text-white flex items-center gap-4">
+                <p className="text-muted flex items-center gap-4">
                   <span className="flex gap-2 items-center">
                     <Calender />
                     {item.date}

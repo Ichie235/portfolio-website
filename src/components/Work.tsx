@@ -33,14 +33,14 @@ export default function Work() {
               <div className="flex flex-col items-start">
                 <h3 className="text-xl font-semibold">{items.company}</h3>
                 <p>{items.title}</p>
-                <time className="text-sm text-[#5e5f69] dark:text-white mt-2 tracking-widest uppercase">
+                <time className="text-muted mt-2 text-sm tracking-widest uppercase">
                   {items.start}
                   {/* */} -{/* */}{" "}
                   <span className="dark:text-[#2DDDC0] text-tr-red">
                     {items.end}
                   </span>
                 </time>
-                <p className="tracking-tight dark:text-white text-[#5e5f69] my-4">
+                <p className="text-muted my-4 tracking-tight">
                   {items.description}
                 </p>
               </div>

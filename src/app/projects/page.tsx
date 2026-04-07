@@ -30,7 +30,7 @@ export default async function Project() {
           <Link
             key={item.slug}
             href={`/projects/${item.slug}`}
-            className="flex items-center gap-x-4 bg-[#fafafa] dark:bg-lighter-tr-black  border border-transparent px-4 py-2 rounded-lg"
+            className="surface-panel flex items-center gap-x-4 rounded-lg border border-transparent px-4 py-2"
           >
             <Image
               src={item.icon}
@@ -45,7 +45,7 @@ export default async function Project() {
               <h2 className="text-base tracking-wide mb-1 font-semibold">
                 {item.name}
               </h2>
-              <div className="text-sm dark:text-white text-[#5e5f69]">
+              <div className="text-muted text-sm">
                 {item.description}
               </div>
             </div>

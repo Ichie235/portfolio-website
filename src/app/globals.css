@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-muted {
+    @apply text-[#5e5f69] dark:text-white;
+  }
+
+  .text-section {
+    @apply text-[#3f3f46] dark:text-white;
+  }
+
+  .surface-panel {
+    @apply bg-[#fafafa] dark:bg-lighter-tr-black;
+  }
+
+  .resume-action {
+    @apply flex items-center justify-center text-center bg-[#e7decc] dark:bg-lighter-tr-black rounded-md;
+  }
+}
+
 .light {
   --color: rgba(221, 45, 74, 1);
 }
@@ -47,36 +65,6 @@
     overflow-x: scroll;
   }
 }
-@media (min-width: 100px) and (max-width: 390px) {
-  .custom-sm {
-    display: block;
-  }
-}
-@media (min-width: 390px) and (max-width: 425px) {
-  .custom-md {
-    display: block;
-  }
-}
-@media (min-width: 426px) and (max-width: 540px) {
-  .custom-md,
-  .custom-sm {
-    display: none;
-  }
-  .custom-mdLg {
-    display: block;
-  }
-}
-@media (min-width: 541px) and (max-width: 768px) {
-  .custom-md,
-  .custom-mdLg,
-  .custom-sm {
-    display: none;
-  }
-  .custom-xl {
-    display: block;
-  }
-}
-
 /* Animation bounce */
 @keyframes bounce {
   0%,

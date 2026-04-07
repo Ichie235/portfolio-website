@@ -39,7 +39,7 @@ export const TextReveal = ({
         }}
         className={className}
       >
-        <motion.div
+        <motion.span
           variants={{
             hidden: { opacity: 0, y: 75 },
             visible: { opacity: 1, y: 0 },
@@ -47,10 +47,11 @@ export const TextReveal = ({
           initial="hidden"
           animate={mainControls}
           transition={{ duration: 0.5, delay: 0.25 }}
+          style={{ display: "block" }}
         >
           {text}
-        </motion.div>
-        <motion.div
+        </motion.span>
+        <motion.span
           variants={{
             hidden: { left: 0 },
             visible: { left: "100%" },
@@ -66,8 +67,9 @@ export const TextReveal = ({
             right: 0,
             background: "var(--color)",
             zIndex: 20,
+            display: "block",
           }}
-        ></motion.div>
+        />
       </Wrapper>
     </div>
   );
