@@ -1,6 +1,4 @@
-"use client";
 import AboutMe from "../../components/about/Content";
-import { useState } from "react";
 import Image from "next/image";
 import SkillsTools from "../../components/about/SkillsTools";
 import Link from "next/link";
@@ -8,27 +6,6 @@ import Download from "../../../SVG/Download";
 import Email from "../../../SVG/Email";
 
 export default function About() {
-  const [downloading, setDownloading] = useState(false);
-
-  const handleDownload = async () => {
-    setDownloading(true);
-    try {
-      const response = await fetch("/api/download");
-      if (response.ok) {
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(new Blob([blob]));
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "richard-resume.pdf";
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        window.URL.revokeObjectURL(url);
-      }
-    } finally {
-      setDownloading(false);
-    }
-  };
   return (
     <main className="w-full px-6 md:px-12 overflow-x-hidden lg:px-20 xl:px-36 pt-3 pb-4 md:py-4 ">
       <section className="w-full flex flex-col-reverse items-center lg:flex-row lg:items-start lg:justify-around  mt-[3rem] md:mt-[6rem]">
@@ -68,14 +45,14 @@ export default function About() {
                     <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z" />
                   </svg>
                 </Link>
-                <button
+                <a
+                  href="/api/download"
+                  download
                   className="flex items-center justify-center text-center dark:text-[#32d48b] text-secondary-color hover:underline basis-[10%] dark:bg-lighter-tr-black bg-[#e7decc] border border-transparent dark:hover:border-tr-black hover:border-tr-green rounded-md py-3 text-lg"
                   title="Download Resume"
-                  onClick={handleDownload}
-                  disabled={downloading}
                 >
-                  {downloading ? "..." : <Download />}
-                </button>
+                  <Download />
+                </a>
               </div>
               <Link
                 href="mailto:chinemeremichie@gmail.com"

@@ -11,6 +11,7 @@ import IchieHeroLightXl from "../../SVG/IchieHeroLightXl";
 import IchieHeroLightLg from "../../SVG/IchieHeroLightLg";
 import IchieHeroSm from "../../SVG/IchieHeroSm";
 import IchieHeroLightSm from "../../SVG/IchieHeroLightSm";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   const title = ["Fullstack Software\nEngineer"];
@@ -30,6 +31,11 @@ export default function Hero() {
     "Hi, I am Chinemerem Ichie, a fullstack \ndeveloper based in Enugu. I excel at \ncreating powerful and scalable web \napplications for everyday use",
   ];
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <main
@@ -87,7 +93,7 @@ export default function Hero() {
           ))}
         </div>
       </section>
-      {resolvedTheme === "dark" && (
+      {mounted && resolvedTheme === "dark" && (
         <>
           <section className="hidden xl:block transform hover:-rotate-12 hover:-mt-10 px-4 -mt-8">
             <IchieHeroXl />
@@ -100,7 +106,7 @@ export default function Hero() {
           </section>
         </>
       )}
-      {resolvedTheme === "light" && (
+      {mounted && resolvedTheme === "light" && (
         <>
           <section className="hidden xl:block transform hover:-rotate-12 hover:-mt-10 px-4 -mt-8">
             <IchieHeroLightXl />
