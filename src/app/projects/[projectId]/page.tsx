@@ -31,6 +31,7 @@ const ProjectDetails = ({ params: { projectId } }: Params) => {
         <Link
           href={projectDetails.link}
           target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg dark:bg-lighter-tr-black dark:text-white bg-tr-white hover:bg-white text-black font-light"
         >
           Explore

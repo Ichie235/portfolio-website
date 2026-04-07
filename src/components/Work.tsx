@@ -18,6 +18,7 @@ export default function Work() {
               <Link
                 href={items.link}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="grid place-items-center dark:bg-[#27272a] bg-white border dark:border-white border-bla min-h-[80px] min-w-[80px] p-2 rounded-md overflow-clip relative"
               >
                 <Image

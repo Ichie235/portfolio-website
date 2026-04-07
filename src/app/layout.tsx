@@ -25,13 +25,13 @@ export default function RootLayout({
       <head>
         <link
           rel="shortcut icon"
-          href="/chinemerem-logo-dark.png"
+          href="/logo/chinemerem-logo-dark.png"
           type="image/x-icon"
         />
       </head>
       <body
         className={`
-        relative w-screen min-h-screen max-h-full overflow-x-hidden bg-white bg-noise text-black  dark:bg-black dark:text-white transition-colors duration-100 scroll-smooth
+        relative w-full min-h-screen max-h-full overflow-x-hidden bg-white bg-noise text-black  dark:bg-black dark:text-white transition-colors duration-100 scroll-smooth
         ${anek.className}
         scrollbar-thin scrollbar-thumb-rounded-sm scrollbar-thumb-black dark:scrollbar-thumb-white 
       `}

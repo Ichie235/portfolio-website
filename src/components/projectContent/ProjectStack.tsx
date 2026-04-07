@@ -59,6 +59,7 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
                 <Link
                   href={link.href}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="font-semibold text-red dark:text-green"
                 >
                   {link.text}
@@ -103,6 +104,7 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
                 <Link
                   href={link.href}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="font-semibold text-red dark:text-green"
                 >
                   {link.text}
@@ -147,6 +149,7 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
                 <Link
                   href={link.href}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="font-semibold text-red dark:text-green"
                 >
                   {link.text}
@@ -191,6 +194,7 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
                 <Link
                   href={link.href}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="font-semibold text-red dark:text-green"
                 >
                   {link.text}
@@ -235,6 +239,7 @@ const ProjectStack: React.FC<ProjectStackProps> = ({ projectName }) => {
                 <Link
                   href={link.href}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="font-semibold text-red dark:text-green"
                 >
                   {link.text}

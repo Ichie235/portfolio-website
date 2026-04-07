@@ -41,7 +41,7 @@ export default function Hero() {
           <HeadText
             el="pre"
             text={title}
-            className="w-[90%] md:w-full  font-taruno text-base  md:text-4xl dark:"
+            className="w-[90%] md:w-full font-taruno text-base md:text-4xl"
             once
           />{" "}
           <br />
@@ -49,27 +49,27 @@ export default function Hero() {
             el="pre"
             width="fit-content"
             text={about}
-            className="hidden md:block w-full text-tr-black dark:text-tr-white font-varuna dark:"
+            className="hidden md:block w-full text-tr-black dark:text-tr-white font-varuna"
           />
           <TextReveal
             el="pre"
             text={aboutXlSm}
-            className="hidden  custom-xl  text-tr-black text-base dark:text-tr-white font-varuna dark:"
+            className="hidden custom-xl text-tr-black text-base dark:text-tr-white font-varuna"
           />
           <TextReveal
             el="pre"
             text={aboutLgSm}
-            className="hidden  custom-mdLg  text-tr-black text-base dark:text-tr-white font-varuna dark:"
+            className="hidden custom-mdLg text-tr-black text-base dark:text-tr-white font-varuna"
           />
           <TextReveal
             el="pre"
             text={aboutMdSm}
-            className="hidden md:hidden custom-md text-tr-black text-base dark:text-tr-white font-varuna dark:"
+            className="hidden md:hidden custom-md text-tr-black text-base dark:text-tr-white font-varuna"
           />
           <TextReveal
             el="pre"
             text={aboutSm}
-            className=" custom-sm md:hidden text-tr-black text-base dark:text-tr-white font-varuna dark:"
+            className="custom-sm md:hidden text-tr-black text-base dark:text-tr-white font-varuna"
           />
         </div>
         <div className="relative flex items-center my-7 gap-2 md:gap-5 flex-wrap">
@@ -77,8 +77,9 @@ export default function Hero() {
             <Link
               key={items.id}
               href={items.url}
-              className="relative font-varuna text-sm md:text-base p-2 max-w-fit basis-1 grow flex items-center gap-2 dark: border rounded-md transition-colors duration-75 border-tr-black hover:border-tr-red dark:border-tr-white dark:hover:border-tr-green"
+              className="relative flex grow basis-1 items-center gap-2 rounded-md border border-tr-black p-2 font-varuna text-sm transition-colors duration-75 hover:border-tr-red dark:border-tr-white dark:hover:border-tr-green md:text-base"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <Icon icon={items.icon} />
               <span>{items.title}</span>

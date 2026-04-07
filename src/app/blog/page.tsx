@@ -7,7 +7,7 @@ import Clock from "../../../SVG/Clock";
 import Calender from "../../../SVG/Calender";
 
 export const metadata: Metadata = {
-  title: "Chinemerem Ichie | About",
+  title: "Chinemerem Ichie | Blog",
   // metadataBase: new URL(""),
   description: "This is the page where i post about things i have built 😉",
 };
@@ -32,7 +32,12 @@ export default function Blog() {
       </section>
       <div className="flex flex-col lg:max-w-[950px] max-w-full lg:gap-y-8 gap-y-12 mb-12">
         {blogPost.map((item, index) => (
-          <Link key={index} href={item.link} target="_blank">
+          <Link
+            key={index}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="card lg:card-side shadow-xl border border-tr-white bg-[#f8f8f8] dark:bg-lighter-tr-black md:h-72  lg:h-64">
               <figure>
                 <Image

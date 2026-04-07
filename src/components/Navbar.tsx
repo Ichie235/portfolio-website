@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import ThemeButton from "@/utils/ThemeButton";
 import Link from "next/link";
@@ -14,6 +14,7 @@ import Home from "../../SVG/Home";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -24,7 +25,10 @@ export default function Navbar() {
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
   const { resolvedTheme } = useTheme();
-  let src;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navItems = [
     {
@@ -53,20 +57,13 @@ export default function Navbar() {
     },
   ];
 
-  switch (resolvedTheme) {
-    case "light":
-      src = "/logo/chinemerem-logo.png";
-      break;
-    case "dark":
-      src = "/logo/chinemerem-logo-dark.png";
-      break;
-    default:
-      src = "/chinemerem-logo.png";
-      break;
-  }
+  const src =
+    mounted && resolvedTheme === "dark"
+      ? "/logo/chinemerem-logo-dark.png"
+      : "/logo/chinemerem-logo.png";
 
   return (
-    <nav className="w-screen px-6 md:px-16 py-2 flex items-center z-10 justify-between border-b border-b-tr-black dark:border-b-tr-white">
+    <nav className="w-full px-6 md:px-16 py-2 flex items-center z-10 justify-between border-b border-b-tr-black dark:border-b-tr-white">
       <Link href={"/"}>
         <Image
           src={src}
@@ -122,7 +119,7 @@ export default function Navbar() {
           <div className="flex items-center justify-end mt-6 px-8">
             <button
               aria-label="Toggle Menu"
-              className="dark:bg-lighter-tr-black bg-white border dark:border-tr-white border-zinc-200 rounded-full p-2 duration-500 null "
+              className="rounded-full border border-zinc-200 bg-white p-2 duration-500 dark:border-tr-white dark:bg-lighter-tr-black"
               onClick={toggleNavbar}
             >
               <Close />

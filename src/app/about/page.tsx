@@ -23,6 +23,7 @@ export default function About() {
         document.body.appendChild(a);
         a.click();
         a.remove();
+        window.URL.revokeObjectURL(url);
       }
     } finally {
       setDownloading(false);
