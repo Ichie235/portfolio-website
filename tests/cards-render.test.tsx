@@ -1,6 +1,6 @@
 import React from "react";
-import { act } from "react";
 import { createRoot, Root } from "react-dom/client";
+import { act } from "react-dom/test-utils";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import BlogPage from "../src/app/blog/page";
 import ProjectsPage from "../src/app/projects/page";
