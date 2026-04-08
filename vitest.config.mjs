@@ -1,5 +1,5 @@
-import { defineConfig } from "vitest/config";
 import path from "path";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
@@ -7,9 +7,13 @@ export default defineConfig({
     globals: true,
     setupFiles: ["./vitest.setup.ts"],
   },
+  esbuild: {
+    jsx: "automatic",
+    jsxImportSource: "react",
+  },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(process.cwd(), "./src"),
     },
   },
 });
