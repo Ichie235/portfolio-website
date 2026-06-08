@@ -37,8 +37,8 @@ export default async function Project() {
               alt={item.name}
               width={100}
               height={100}
+              sizes="100px"
               className="dark:bg-[#474444] bg-[#ede9e9] rounded-md p-3 transition duration-300 ease-in-out transform hover:scale-105"
-              style={{ color: "transparent" }}
             />
 
             <div>

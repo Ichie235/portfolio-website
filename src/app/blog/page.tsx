@@ -45,8 +45,9 @@ export default function Blog() {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={100}
-                  height={100}
+                  width={1200}
+                  height={800}
+                  sizes="(min-width: 1024px) 554px, (min-width: 768px) 400px, 85vw"
                   className=" mt-6 w-[85%] h-[224px] md:mt-0 md:w-[400px] md:h-[400px] lg:w-[554.4px] lg:h-[254.4px] transition duration-300 ease-in-out transform hover:scale-105"
                 />
               </figure>

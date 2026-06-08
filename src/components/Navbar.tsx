@@ -11,6 +11,7 @@ import UserPortrait from "../../SVG/UserPortrait";
 import Blog from "../../SVG/Blog";
 import Project from "../../SVG/Project";
 import Home from "../../SVG/Home";
+import { siteAssets } from "@/lib/assets";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,8 +60,8 @@ export default function Navbar() {
 
   const src =
     mounted && resolvedTheme === "dark"
-      ? "/logo/chinemerem-logo-dark.png"
-      : "/logo/chinemerem-logo.png";
+      ? siteAssets.logoDark
+      : siteAssets.logoLight;
 
   return (
     <nav
@@ -74,6 +75,7 @@ export default function Navbar() {
           width={60}
           height={60}
           priority
+          sizes="60px"
         />
       </Link>
 

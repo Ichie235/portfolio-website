@@ -25,9 +25,9 @@ export default function Work() {
                   alt="work place icons"
                   width={45}
                   height={45}
+                  sizes="45px"
                   src={items.image}
                   className="object-cover duration-300"
-                  style={{ color: "transparent" }}
                 />
               </Link>
               <div className="flex flex-col items-start">

@@ -67,10 +67,11 @@ const ProjectDetails = ({ params: { projectId } }: Params) => {
         {" "}
         <Image
           src={projectDetails.image}
-          alt="Project Icons"
-          width={285}
-          height={36}
+          alt={`${projectDetails.name} project preview`}
+          width={1200}
+          height={675}
           priority
+          sizes="(min-width: 1024px) 750px, (min-width: 768px) 75vw, 90vw"
           className="rounded-lg md:w-[75%] lg:w-[750px] md:h-[350px] w-[90%] shadow-lg bg-cover"
         />
       </div>

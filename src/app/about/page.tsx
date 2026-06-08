@@ -18,6 +18,7 @@ export default function About() {
             width={400}
             height={400}
             priority
+            sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 90vw"
             alt="Chinemerem Ichie Richard"
             className="rounded-xl  border border-black max-h-96 min-h-96 object-cover "
           />

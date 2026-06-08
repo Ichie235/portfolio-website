@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import BackToTopButton from "@/components/BackToTopButton";
 import { buildPageMetadata } from "@/lib/site";
+import { siteAssets } from "@/lib/assets";
 
 const anek = Anek_Latin({ subsets: ["latin"], variable: "--font-body" });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-heading" });
@@ -33,7 +34,7 @@ export default function RootLayout({
       <head>
         <link
           rel="shortcut icon"
-          href="/logo/chinemerem-logo-dark.png"
+          href={siteAssets.logoDark}
           type="image/x-icon"
         />
       </head>

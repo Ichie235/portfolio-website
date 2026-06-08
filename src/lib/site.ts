@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteAssets } from "./assets";
 
 type MetadataInput = {
   title: string;
@@ -17,7 +18,7 @@ export const siteConfig = {
   description:
     "Portfolio website of Chinemerem Ichie, a full-stack software engineer building scalable web applications.",
   url: siteUrl,
-  ogImage: "/logo/chinemerem-logo-dark.png",
+  ogImage: siteAssets.socialPreview,
   twitterHandle: "@chinemerem_rich",
 };
 

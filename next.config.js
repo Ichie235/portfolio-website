@@ -1,17 +1,47 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      "static-00.iconduck.com",
-      "raw.githubusercontent.com",
-      "titrias.com",
-      "w7.pngwing.com",
-      "cdn-icons-png.flaticon.com",
-      "uxwing.com",
-      "upload.wikimedia.org",
-      "daisyui.com",
-      "images.unsplash.com",
-      "res.cloudinary.com" 
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "static-00.iconduck.com",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "titrias.com",
+      },
+      {
+        protocol: "https",
+        hostname: "w7.pngwing.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn-icons-png.flaticon.com",
+      },
+      {
+        protocol: "https",
+        hostname: "uxwing.com",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+      {
+        protocol: "https",
+        hostname: "daisyui.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
     ],
   },
 };

@@ -52,8 +52,9 @@ export default function SkillsTools({ isInView }: { isInView: boolean }) {
             >
               <Image
                 src={items.icon}
-                width={20}
-                height={20}
+                width={80}
+                height={80}
+                sizes="(min-width: 1024px) 80px, (min-width: 768px) 64px, 20px"
                 alt={items.name}
                 className="grayscale hover:filter-none transition-[scale, filter] duration-500 ease-in-out transform hover:scale-110 md:w-16 md:h-16 lg:w-[80px] lg:h-[80px]"
                 style={{
@@ -94,8 +95,9 @@ export default function SkillsTools({ isInView }: { isInView: boolean }) {
             >
               <Image
                 src={items.icon}
-                width={20}
-                height={20}
+                width={75}
+                height={75}
+                sizes="(min-width: 1024px) 75px, (min-width: 768px) 64px, 20px"
                 alt={items.name}
                 className="grayscale hover:filter-none transition-[scale, filter] duration-500 ease-in-out transform hover:scale-110 md:w-16 md:h-16 lg:w-[75px] lg:h-[75px]"
                 style={{
