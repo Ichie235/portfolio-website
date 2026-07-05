@@ -4,6 +4,7 @@ import SkillsTools from "../../components/about/SkillsTools";
 import Link from "next/link";
 import Download from "../../../SVG/Download";
 import Email from "../../../SVG/Email";
+import { siteAssets } from "@/lib/assets";
 
 export default function About() {
   return (
@@ -14,7 +15,7 @@ export default function About() {
         </div>
         <aside className="flex flex-col justify-between gap-7 md:mb-10">
           <Image
-            src="https://res.cloudinary.com/dl2hqugpy/image/upload/v1717368078/My-Personal-Image/g6pmgq8ztbuntjawuvy7.jpg"
+            src={siteAssets.profileImage}
             width={400}
             height={400}
             priority

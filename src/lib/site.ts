@@ -26,8 +26,12 @@ export function buildPageMetadata({
   title,
   description,
   path = "/",
-  image = siteConfig.ogImage,
+  image,
 }: MetadataInput): Metadata {
+  const ogImage =
+    image ??
+    `${siteConfig.ogImage}?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+
   return {
     metadataBase: new URL(siteConfig.url),
     title,
@@ -43,7 +47,9 @@ export function buildPageMetadata({
       siteName: siteConfig.name,
       images: [
         {
-          url: image,
+          url: ogImage,
+          width: 1200,
+          height: 630,
           alt: title,
         },
       ],
@@ -53,7 +59,7 @@ export function buildPageMetadata({
       title,
       description,
       creator: siteConfig.twitterHandle,
-      images: [image],
+      images: [ogImage],
     },
   };
 }
