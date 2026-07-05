@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { project } from "../../../library/projects/_project";
+import { project } from "@/content/projects";
 import { buildPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({

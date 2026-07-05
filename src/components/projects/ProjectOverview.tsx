@@ -1,5 +1,5 @@
-import { projectContentBySlug } from "../../../library/projects/_projectContent";
-import type { ProjectSlug } from "../../../library/projects/_project";
+import { projectContentBySlug } from "@/content/projects/content";
+import type { ProjectSlug } from "@/content/projects";
 
 type ProjectOverviewProps = {
   projectName: ProjectSlug;

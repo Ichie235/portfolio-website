@@ -4,8 +4,8 @@ import { act } from "react-dom/test-utils";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import BlogPage from "../src/app/blog/page";
 import ProjectsPage from "../src/app/projects/page";
-import { blogPost } from "../library/blogPost/_blogPost";
-import { project } from "../library/projects/_project";
+import { blogPost } from "../src/content/blog/posts";
+import { project } from "../src/content/projects";
 
 let container: HTMLDivElement;
 let root: Root;

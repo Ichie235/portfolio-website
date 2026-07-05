@@ -2,8 +2,8 @@ import AboutMe from "../../components/about/Content";
 import Image from "next/image";
 import SkillsTools from "../../components/about/SkillsTools";
 import Link from "next/link";
-import Download from "../../../SVG/Download";
-import Email from "../../../SVG/Email";
+import Download from "@/icons/Download";
+import Email from "@/icons/Email";
 import { siteAssets } from "@/lib/assets";
 
 export default function About() {

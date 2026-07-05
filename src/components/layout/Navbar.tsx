@@ -5,12 +5,12 @@ import Image from "next/image";
 import ThemeButton from "@/utils/ThemeButton";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Hamburger from "../../SVG/Hamburger";
-import Close from "../../SVG/Close";
-import UserPortrait from "../../SVG/UserPortrait";
-import Blog from "../../SVG/Blog";
-import Project from "../../SVG/Project";
-import Home from "../../SVG/Home";
+import Hamburger from "@/icons/Hamburger";
+import Close from "@/icons/Close";
+import UserPortrait from "@/icons/UserPortrait";
+import Blog from "@/icons/Blog";
+import Project from "@/icons/Project";
+import Home from "@/icons/Home";
 import { siteAssets } from "@/lib/assets";
 
 export default function Navbar() {

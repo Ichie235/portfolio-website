@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { project } from "../library/projects/_project";
-import { projectContentBySlug } from "../library/projects/_projectContent";
+import { project } from "../src/content/projects";
+import { projectContentBySlug } from "../src/content/projects/content";
 
 describe("project content", () => {
   it("has content for every configured project slug", () => {

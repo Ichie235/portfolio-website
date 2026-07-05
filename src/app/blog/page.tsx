@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import Explore from "../../../SVG/Explore";
+import Explore from "@/icons/Explore";
 import Image from "next/image";
-import { blogPost } from "../../../library/blogPost/_blogPost";
+import { blogPost } from "@/content/blog/posts";
 import Link from "next/link";
-import Clock from "../../../SVG/Clock";
-import Calender from "../../../SVG/Calender";
+import Clock from "@/icons/Clock";
+import Calender from "@/icons/Calender";
 import { buildPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({

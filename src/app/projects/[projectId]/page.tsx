@@ -4,11 +4,11 @@ import {
   project,
   ProjectProps,
   ProjectSlug,
-} from "../../../../library/projects/_project";
+} from "@/content/projects";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import ProjectStack from "@/components/projectContent/ProjectStack";
-import ProjectOverview from "@/components/projectContent/ProjectOverview";
+import ProjectStack from "@/components/projects/ProjectStack";
+import ProjectOverview from "@/components/projects/ProjectOverview";
 import { buildPageMetadata } from "@/lib/site";
 
 type Params = {

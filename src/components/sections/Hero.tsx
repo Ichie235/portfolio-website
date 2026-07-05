@@ -1,16 +1,16 @@
 "use client";
 import { HeadText } from "@/animations/HeadText";
 import { TextReveal } from "@/animations/TextReveal";
-import { socials } from "../../library/_data";
+import { socials } from "@/content/data";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-import IchieHeroXl from "../../SVG/IchieHeroXl";
-import IchieHeroLg from "../../SVG/IchieHeroLg";
+import IchieHeroXl from "@/icons/hero/IchieHeroXl";
+import IchieHeroLg from "@/icons/hero/IchieHeroLg";
 import { useTheme } from "next-themes";
-import IchieHeroLightXl from "../../SVG/IchieHeroLightXl";
-import IchieHeroLightLg from "../../SVG/IchieHeroLightLg";
-import IchieHeroSm from "../../SVG/IchieHeroSm";
-import IchieHeroLightSm from "../../SVG/IchieHeroLightSm";
+import IchieHeroLightXl from "@/icons/hero/IchieHeroLightXl";
+import IchieHeroLightLg from "@/icons/hero/IchieHeroLightLg";
+import IchieHeroSm from "@/icons/hero/IchieHeroSm";
+import IchieHeroLightSm from "@/icons/hero/IchieHeroLightSm";
 import { useEffect, useState } from "react";
 
 export default function Hero() {

@@ -1,21 +1,9 @@
-import type { ProjectSlug } from "./_project";
-import { blogData, linksData } from "./blogProject/_blogData";
-import {
-  apartmentData,
-  apartmentlinksData,
-} from "./one7thapartment/_apartmentData";
-import {
-  avvicBankData,
-  avvicBanklinksData,
-} from "./avvicBankProject/_avvicBankData";
-import {
-  ecommerceData,
-  ecommercelinksData,
-} from "./ecommerceProject/_ecommerceData";
-import {
-  restaurantData,
-  restaurantlinksData,
-} from "./restaurantProject/_restaurantProjectData";
+import type { ProjectSlug } from "./index";
+import { blogData, linksData } from "./blog-website";
+import { apartmentData, apartmentlinksData } from "./one7th-apartment";
+import { avvicBankData, avvicBanklinksData } from "./avvic-bank";
+import { ecommerceData, ecommercelinksData } from "./ecommerce";
+import { restaurantData, restaurantlinksData } from "./restaurant";
 
 export type ProjectTechnologyLink = {
   href: string;

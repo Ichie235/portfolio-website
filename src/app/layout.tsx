@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Anek_Latin, Orbitron, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Provider from "@/components/Provider";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Provider from "@/components/layout/Provider";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import { Suspense } from "react";
 import Loading from "./loading";
-import BackToTopButton from "@/components/BackToTopButton";
+import BackToTopButton from "@/components/layout/BackToTopButton";
 import { buildPageMetadata } from "@/lib/site";
 import { siteAssets } from "@/lib/assets";
 
