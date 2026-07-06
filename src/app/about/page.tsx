@@ -1,10 +1,12 @@
 import AboutMe from "../../components/about/Content";
 import Image from "next/image";
 import SkillsTools from "../../components/about/SkillsTools";
+import GitHubStats from "@/components/sections/GitHubStats";
 import Link from "next/link";
 import Download from "@/icons/Download";
 import Email from "@/icons/Email";
 import { siteAssets } from "@/lib/assets";
+import { Suspense } from "react";
 
 export default function About() {
   return (
@@ -71,6 +73,9 @@ export default function About() {
       <br /> */}
       <div className="w-full mt-16 md:mt-20  md:px-20 lg:px-16">
         <SkillsTools />
+        <Suspense fallback={null}>
+          <GitHubStats />
+        </Suspense>
       </div>
     </main>
   );

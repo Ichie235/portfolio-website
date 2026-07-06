@@ -26,12 +26,6 @@ export const socials: SocialLink[] = [
   },
   {
     id: 4,
-    title: "Email",
-    icon: "line-md:email",
-    url: "mailto:chinemeremichie@gmail.com",
-  },
-  {
-    id: 5,
     title: "Leetcode",
     icon: "cib:leetcode",
     url: "https://leetcode.com/Ichie/",

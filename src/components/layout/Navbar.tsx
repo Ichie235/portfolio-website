@@ -11,11 +11,14 @@ import UserPortrait from "@/icons/UserPortrait";
 import Blog from "@/icons/Blog";
 import Project from "@/icons/Project";
 import Home from "@/icons/Home";
+import Email from "@/icons/Email";
 import { siteAssets } from "@/lib/assets";
+import { useCommandPalette } from "@/hooks/useCommandPalette";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { setOpen: openPalette } = useCommandPalette();
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -55,6 +58,12 @@ export default function Navbar() {
       path: "/blog",
       title: "Blog",
       icon: <Blog />,
+    },
+    {
+      id: "contact",
+      path: "/contact",
+      title: "Contact",
+      icon: <Email />,
     },
   ];
 
@@ -97,14 +106,36 @@ export default function Navbar() {
         ))}
       </div>
 
-      <ThemeButton
-        className={`hidden md:block rounded !text-2xl !p-1 border border-red dark:border-green transition-transform ease-in-out duration-150`}
-      />
+      <div className="hidden md:flex items-center gap-3">
+        <button
+          onClick={() => openPalette(true)}
+          aria-label="Open command palette"
+          className="flex items-center gap-2 rounded border border-tr-black dark:border-tr-white px-2.5 py-1 font-varuna text-xs text-tr-black dark:text-tr-white hover:border-red dark:hover:border-green hover:text-red dark:hover:text-green transition-colors"
+        >
+          <span>Search</span>
+          <kbd className="flex items-center gap-0.5 opacity-70">
+            <span>⌘</span><span>K</span>
+          </kbd>
+        </button>
+        <ThemeButton
+          className={`rounded !text-2xl !p-1 border border-red dark:border-green transition-transform ease-in-out duration-150`}
+        />
+      </div>
       {/*Navbar Mobile view */}
       <div className="md:hidden flex items-center justify-between gap-4">
         <ThemeButton
           className={`md:hidden rounded !text-2xl !p-1 border border-red dark:border-green transition-transform ease-in-out duration-150`}
         />
+        <button
+          onClick={() => openPalette(true)}
+          aria-label="Open command palette"
+          className="md:hidden rounded-lg border border-tr-black dark:border-tr-white w-10 h-10 flex items-center justify-center text-black dark:text-white hover:border-red dark:hover:border-green hover:text-red dark:hover:text-green transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width="1.1em" height="1.1em" aria-hidden>
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+        </button>
         <div className="md:hidden">
           <button
             aria-controls="mobile-navigation"
