@@ -12,6 +12,8 @@ import IchieHeroLightLg from "@/icons/hero/IchieHeroLightLg";
 import IchieHeroSm from "@/icons/hero/IchieHeroSm";
 import IchieHeroLightSm from "@/icons/hero/IchieHeroLightSm";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import AvailabilityBadge from "@/components/ui/AvailabilityBadge";
 
 export default function Hero() {
   const title = "Full-Stack Software Engineer";
@@ -30,6 +32,14 @@ export default function Hero() {
     >
       <section className="px-2 xl:pl-5 ">
         <div className="">
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="mb-4"
+          >
+            <AvailabilityBadge />
+          </motion.div>
           <HeadText
             el="h1"
             text={title}

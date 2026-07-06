@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 type TextRevealProps = {
   text: string | string[];
@@ -17,25 +16,12 @@ export const TextReveal = ({
   once,
   className,
 }: TextRevealProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once });
-  const mainControls = useAnimation();
-  const slideControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-      slideControls.start("visible");
-    }
-  }, [isInView, mainControls, slideControls]);
-
   return (
-    <div ref={ref}>
+    <div>
       <Wrapper
         style={{
           position: "relative",
           width: width,
-          overflow: "hidden",
         }}
         className={className}
       >
@@ -45,7 +31,8 @@ export const TextReveal = ({
             visible: { opacity: 1, y: 0 },
           }}
           initial="hidden"
-          animate={mainControls}
+          whileInView="visible"
+          viewport={{ once, amount: 0 }}
           transition={{ duration: 0.5, delay: 0.25 }}
           style={{ display: "block" }}
         >
@@ -57,7 +44,8 @@ export const TextReveal = ({
             visible: { left: "100%" },
           }}
           initial="hidden"
-          animate={slideControls}
+          whileInView="visible"
+          viewport={{ once, amount: 0 }}
           transition={{ duration: 0.5, ease: "easeIn" }}
           style={{
             position: "absolute",

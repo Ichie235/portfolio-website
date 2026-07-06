@@ -1,13 +1,11 @@
 "use client";
-import { motion, useInView, useAnimation, Variant } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion, Variant } from "framer-motion";
 
 type HeadTextProps = {
   text: string | string[];
   el?: keyof JSX.IntrinsicElements;
   className?: string;
   once?: boolean;
-  repeatDelay?: number;
   animation?: {
     hidden: Variant;
     visible: Variant;
@@ -33,42 +31,16 @@ export const HeadText = ({
   el: Wrapper = "p",
   className,
   once,
-  repeatDelay,
   animation = defaultAnimations,
 }: HeadTextProps) => {
-  const controls = useAnimation();
   const textArray = Array.isArray(text) ? text : [text];
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5, once });
-
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-    const show = () => {
-      controls.start("visible");
-      if (repeatDelay) {
-        timeout = setTimeout(async () => {
-          await controls.start("hidden");
-          controls.start("visible");
-        }, repeatDelay);
-      }
-    };
-
-    if (isInView) {
-      show();
-    } else {
-      controls.start("hidden");
-    }
-
-    return () => clearTimeout(timeout);
-  }, [controls, isInView, repeatDelay]);
 
   return (
     <Wrapper className={className}>
-      {/* <span className="sr-only">{text}</span> */}
       <motion.span
-        ref={ref}
         initial="hidden"
-        animate={controls}
+        whileInView="visible"
+        viewport={{ once, amount: 0 }}
         variants={{
           visible: { transition: { staggerChildren: 0.05 } },
           hidden: {},
