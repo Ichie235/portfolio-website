@@ -6,34 +6,25 @@ import { tools } from "./_tools";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function SkillsTools({ isInView }: { isInView: boolean }) {
+export default function SkillsTools() {
   const [currentTechIndex, setCurrenTechtIndex] = useState(0);
   const [currentToolIndex, setCurrenTooltIndex] = useState(0);
 
   useEffect(() => {
-    let intervalId: NodeJS.Timeout;
-
-    if (isInView) {
-      intervalId = setInterval(() => {
-        setCurrenTechtIndex(
-          (prevIndex) => (prevIndex + 1) % technologies.length
-        );
-      }, 3000);
-    }
-
+    const intervalId = setInterval(() => {
+      setCurrenTechtIndex(
+        (prevIndex) => (prevIndex + 1) % technologies.length
+      );
+    }, 3000);
     return () => clearInterval(intervalId);
-  }, [isInView]);
+  }, []);
+
   useEffect(() => {
-    let intervalId: NodeJS.Timeout;
-
-    if (isInView) {
-      intervalId = setInterval(() => {
-        setCurrenTooltIndex((prevIndex) => (prevIndex + 1) % tools.length);
-      }, 3000);
-    }
-
+    const intervalId = setInterval(() => {
+      setCurrenTooltIndex((prevIndex) => (prevIndex + 1) % tools.length);
+    }, 3000);
     return () => clearInterval(intervalId);
-  }, [isInView]);
+  }, []);
 
   return (
     <section className="w-full text-lg">

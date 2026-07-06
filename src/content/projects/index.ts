@@ -23,7 +23,7 @@ export const project: ProjectProps[] = [
     description: "This project was built with Node.js, Express and Mongodb.",
     icon: "/blog-images/blog-picx.svg",
     image: "/blog-images/blog-picx.svg",
-    link: "https://ichie-blogging-api.cyclic.app/",
+    link: "",
   },
   {
     id: "2",

@@ -40,7 +40,7 @@ export const avvicBanklinksData = [
     description: "Javascript runtime",
   },
   {
-    href: "https://www.postgres.com/",
+    href: "https://www.postgresql.org/",
     text: "Postgres",
     description: "Database",
   },
@@ -50,7 +50,7 @@ export const avvicBanklinksData = [
     description: "Hosting platform",
   },
   {
-    href: "https://SCSS.com/",
+    href: "https://sass-lang.com/",
     text: "SCSS",
     description: "CSS",
   },

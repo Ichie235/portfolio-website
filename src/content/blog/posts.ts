@@ -25,7 +25,6 @@ export const blogPost: BlogPost[] = [
     title: "How I built a simple Blog API using Node.js, Express, and MongoDB.",
     description:
       "Article on building a simple blog API with Node.js, Express, and MongoDB. It covers CRUD operations, blog creation and retrieval, JWT authentication, and EJS-based views.",
-    liveLink: "https://ichie-blogging-api.cyclic.app/",
     date: "Jan 14, 2023",
     readTime: "24 min",
     image: "/blog-images/blog-picx.svg",

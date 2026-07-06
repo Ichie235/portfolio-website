@@ -105,7 +105,7 @@ export default function Navbar() {
         <ThemeButton
           className={`md:hidden rounded !text-2xl !p-1 border border-red dark:border-green transition-transform ease-in-out duration-150`}
         />
-        <div className="lg:hidden">
+        <div className="md:hidden">
           <button
             aria-controls="mobile-navigation"
             aria-expanded={isOpen}

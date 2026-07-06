@@ -70,7 +70,7 @@ export default function About() {
       {/* <br />
       <br /> */}
       <div className="w-full mt-16 md:mt-20  md:px-20 lg:px-16">
-        <SkillsTools isInView={true} />
+        <SkillsTools />
       </div>
     </main>
   );
