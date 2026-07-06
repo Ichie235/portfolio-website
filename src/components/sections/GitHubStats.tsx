@@ -82,6 +82,7 @@ export default async function GitHubStats() {
   const summaryCards = [
     {
       label: "Repositories",
+      shortLabel: "Repos",
       value: user.public_repos,
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1.25em" height="1.25em" aria-hidden>
@@ -91,11 +92,13 @@ export default async function GitHubStats() {
     },
     {
       label: "Total Stars",
+      shortLabel: "Stars",
       value: totalStars,
       icon: <StarIcon className="text-xl" />,
     },
     {
       label: "Followers",
+      shortLabel: "Followers",
       value: user.followers,
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1.25em" height="1.25em" aria-hidden>
@@ -125,18 +128,19 @@ export default async function GitHubStats() {
       </div>
 
       {/* Summary stats */}
-      <div className="grid grid-cols-3 gap-3 md:gap-6 mb-12">
+      <div className="grid grid-cols-3 gap-2 md:gap-6 mb-12">
         {summaryCards.map((card) => (
           <div
             key={card.label}
-            className="flex flex-col items-center gap-1 rounded-lg border border-tr-black dark:border-tr-white p-4 md:p-6 surface-panel"
+            className="flex flex-col items-center gap-1 rounded-lg border border-tr-black dark:border-tr-white p-3 md:p-6 surface-panel"
           >
             <span className="text-red dark:text-green mb-1">{card.icon}</span>
-            <span className="font-taruno text-2xl md:text-3xl font-semibold text-black dark:text-white">
+            <span className="font-taruno text-xl md:text-3xl font-semibold text-black dark:text-white">
               {card.value}
             </span>
-            <span className="font-varuna text-xs text-tr-black dark:text-tr-white text-center">
-              {card.label}
+            <span className="font-varuna text-[10px] md:text-xs text-tr-black dark:text-tr-white text-center leading-tight">
+              <span className="sm:hidden">{card.shortLabel}</span>
+              <span className="hidden sm:inline">{card.label}</span>
             </span>
           </div>
         ))}
