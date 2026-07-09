@@ -1,0 +1,56 @@
+---
+title: "My First Experience with useContext in React"
+description: "How I stopped prop-drilling my way through component trees and learned to use React Context — the confusion, the clicks, and what finally made it click."
+date: "2024-02-08"
+readTime: "5 min read"
+tags: ["React", "JavaScript", "State Management"]
+---
+
+## The Problem I Was Avoiding
+
+I had a component tree three levels deep, and I was passing a `user` object through every single level — even the components in the middle that didn't actually need it. Prop drilling. Every React developer hits this wall eventually.
+
+I knew `useContext` existed. I'd skimmed the docs. But every example I found either felt too abstract or too tied to a massive app setup I didn't have. I kept procrastinating.
+
+## What Finally Made It Click
+
+The mental model shift that helped me was thinking of Context as a **broadcast**, not a prop.
+
+A prop is a direct pass: parent gives it to child. Context is more like a radio signal — you set it up once at the top, and any component that tunes in can receive it, regardless of how nested it is.
+
+```jsx
+// 1. Create the context
+const UserContext = createContext(null);
+
+// 2. Provide it at the top
+function App() {
+  const [user, setUser] = useState(null);
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      <Layout />
+    </UserContext.Provider>
+  );
+}
+
+// 3. Consume it anywhere, no drilling needed
+function Avatar() {
+  const { user } = useContext(UserContext);
+  return <img src={user?.avatar} alt={user?.name} />;
+}
+```
+
+That's it. No passing `user` through `Layout` → `Sidebar` → `Avatar`. The `Avatar` component reaches up and takes what it needs directly.
+
+## Where I Got Confused
+
+**Re-renders.** Every component that consumes a context re-renders when the context value changes — even if the specific property it uses didn't change. I burned an afternoon debugging sluggish performance before I understood this.
+
+The fix: split large contexts into smaller, more focused ones. A `ThemeContext` and an `AuthContext` are better than one giant `AppContext`.
+
+## When NOT to Use It
+
+`useContext` is not a state management solution — it's a dependency injection mechanism. For complex state with many updates (shopping cart, form state, real-time data), something like Zustand or Redux Toolkit is a better fit. Context shines for low-frequency, app-wide values: theme, locale, authenticated user.
+
+## What I'd Tell Past Me
+
+Stop overthinking the setup. Create the context, wrap your app, consume where needed. You'll feel the pattern within an hour of actually using it. The documentation only makes full sense after you've written the code.

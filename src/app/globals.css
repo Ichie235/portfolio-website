@@ -81,6 +81,39 @@
   animation: bounce 3s infinite;
 }
 
+/* MDX blog prose styles */
+.prose-custom h2 {
+  @apply font-taruno text-2xl font-semibold mt-10 mb-4 text-black dark:text-white;
+}
+.prose-custom h3 {
+  @apply font-taruno text-xl font-semibold mt-8 mb-3 text-black dark:text-white;
+}
+.prose-custom p {
+  @apply font-varuna text-base leading-relaxed text-[#3f3f46] dark:text-white/90 mb-5;
+}
+.prose-custom ul, .prose-custom ol {
+  @apply font-varuna text-base leading-relaxed text-[#3f3f46] dark:text-white/90 mb-5 ml-6;
+}
+.prose-custom ul { @apply list-disc; }
+.prose-custom ol { @apply list-decimal; }
+.prose-custom li { @apply mb-2; }
+.prose-custom strong { @apply font-semibold text-black dark:text-white; }
+.prose-custom a {
+  @apply text-red dark:text-green underline underline-offset-2 hover:no-underline;
+}
+.prose-custom pre {
+  @apply rounded-lg border border-tr-black dark:border-tr-white bg-[#fafafa] dark:bg-lighter-tr-black p-5 overflow-x-auto mb-6 text-sm;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+.prose-custom code:not(pre code) {
+  @apply text-sm text-red dark:text-green bg-tr-red/10 dark:bg-tr-green/10 px-1.5 py-0.5 rounded;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+.prose-custom blockquote {
+  @apply border-l-4 border-red dark:border-green pl-4 italic text-tr-black dark:text-tr-white mb-5;
+}
+.prose-custom hr { @apply border-tr-black/30 dark:border-tr-white/30 my-8; }
+
 /* Bounce back to top button */
 .bounce {
   animation: bounceAnimation 0.5s ease infinite alternate;

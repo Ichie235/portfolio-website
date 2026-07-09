@@ -33,6 +33,7 @@ const STATIC_ITEMS: PaletteItem[] = [
   { id: "projects-page", label: "Projects", group: "Navigate", icon: "bi:grid-1x2", href: "/projects" },
   { id: "blog", label: "Blog", group: "Navigate", icon: "bi:file-text", href: "/blog" },
   { id: "contact", label: "Contact", group: "Navigate", icon: "line-md:email", href: "/contact" },
+  { id: "guestbook", label: "Guestbook", group: "Navigate", icon: "bi:chat-square-text", href: "/guestbook" },
   ...project.map((p) => ({
     id: `project-${p.slug}`,
     label: p.name,

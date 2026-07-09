@@ -12,6 +12,7 @@ import Blog from "@/icons/Blog";
 import Project from "@/icons/Project";
 import Home from "@/icons/Home";
 import Email from "@/icons/Email";
+import Guestbook from "@/icons/Guestbook";
 import { siteAssets } from "@/lib/assets";
 import { useCommandPalette } from "@/hooks/useCommandPalette";
 
@@ -64,6 +65,12 @@ export default function Navbar() {
       path: "/contact",
       title: "Contact",
       icon: <Email />,
+    },
+    {
+      id: "guestbook",
+      path: "/guestbook",
+      title: "Guestbook",
+      icon: <Guestbook />,
     },
   ];
 

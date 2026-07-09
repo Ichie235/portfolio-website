@@ -1,0 +1,94 @@
+---
+title: "How I Built My Portfolio Website (And Why It Took a Friend to Get Me Started)"
+description: "The full story — from having zero online presence to shipping a portfolio with dark mode, animations, a guestbook, live GitHub stats, and an MDX blog. Also featuring my guy Chibuzo."
+date: "2025-07-09"
+readTime: "9 min read"
+tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
+---
+
+## I Didn't Have a Portfolio. Like, At All.
+
+Let's be honest — for a software engineer, not having a portfolio website is a little embarrassing. I knew I needed one. I kept telling myself *"I'll build it next weekend"* for what felt like six months. Next weekend never came. You know how it is.
+
+Then I got my internship at **Avvic Group** and everything changed. Not because the job gave me more free time (it didn't), but because of who I met there.
+
+## Enter Chibuzo
+
+During my time at Avvic Group, I worked alongside a fellow intern named **Chibuzo** — a frontend engineer, genuinely one of the nicest humans I've come across in tech. At some point he looked at me and basically said "bro, you don't have a portfolio? Let me help you with that."
+
+And just like that, a collaboration was born.
+
+Chibuzo took charge of the **home page** — the first thing anyone sees when they land on the site. If you've visited the homepage and thought *"this looks clean"*, that's him. The hero section, the layout, the vibe. That's Chibuzo's work.
+
+I, meanwhile, had to figure out everything else.
+
+## The Stack We Chose (Or Rather, He Chose and I Agreed)
+
+We went with **Next.js** using the App Router, written in **TypeScript**, and styled with **Tailwind CSS**. Looking back, it was the right call, but at the time I just nodded and said *"yes, sounds good"* while secretly hoping I wouldn't embarrass myself.
+
+Here's the full stack breakdown:
+
+- **Next.js 16 (App Router)** — routing, SSR, ISR, API routes, the whole deal
+- **TypeScript** — because runtime errors are a love language I don't speak
+- **Tailwind CSS** — with a custom color system: `red` for light mode accents, `green` for dark mode
+- **Framer Motion** — for the character-by-character heading animations, text reveals, and page transitions
+- **next-themes** — dark mode, because light mode only is a crime
+- **DaisyUI** — for a few UI components like cards and loading states
+- **Resend** — to power the contact form email delivery
+- **Upstash Redis** — for the guestbook (real visitors, real messages, rate limited)
+- **next-mdx-remote + gray-matter** — so I can write blog posts in MDX (like this one, meta right?)
+
+## What I Built After the Home Page
+
+Once Chibuzo laid the foundation and handed me the keys, I got to work on the rest. This is where things got interesting — and occasionally frustrating.
+
+### The Projects Section
+
+This one was mostly data-driven. I had to structure the project content (overview, features, tech links, and eventually a full development timeline per project) and wire it up to dynamic routes at `/projects/[slug]`. Simple in theory, annoying in practice when you realize you have five projects with slightly different data shapes.
+
+### The Blog
+
+The blog started as a list of links to my Medium articles. Then it became *this* — an internal MDX blog where I can write posts directly in the repo and they show up automatically. No CMS needed. Drop a `.mdx` file in the right folder, commit, deploy. Done.
+
+### The Contact Form
+
+Wired up with Resend. If you fill out the form on the contact page, it hits a Next.js API route that calls the Resend API and drops an email in my inbox. Satisfying to build. Even more satisfying when I sent myself the first test email and it actually worked.
+
+### The Guestbook
+
+My personal favourite. It's backed by **Upstash Redis** — a serverless Redis database — and lets visitors leave a message on the site. Rate limited to one entry per IP per 24 hours so it doesn't turn into a spam wall. The first message in there will probably be from me testing it, and I'm okay with that.
+
+### The Command Palette
+
+Press `Cmd+K` (or `Ctrl+K` on Windows/Linux). Go on, try it. That one was genuinely fun to build — keyboard navigation, fuzzy search, grouped results, theme toggle, copy email, download resume. All from a keyboard shortcut. The kind of thing that makes developer visitors stop and go *"oh wait, this portfolio has a search bar?"*
+
+## The Hardest Part: Animations
+
+This one is Chibuzo's work, and honestly, I'm glad it was — because it was *hard*.
+
+Framer Motion is great. It's also the reason he lost several hours to a bug where animations would play perfectly on page reload but freeze entirely on client-side navigation.
+
+The culprit? React 18's concurrent rendering and `useInView` from Framer Motion not firing for elements already in the viewport at mount time. The fix was actually elegant — replace `useAnimation` + `useInView` with the `whileInView` prop directly on the motion elements, which lets Framer Motion manage the IntersectionObserver internally without racing against React's rendering lifecycle.
+
+That fix alone turned the animations from *"works sometimes"* to *"works every time"*. Chibuzo figured that out. I just inherited the working version and was grateful for it.
+
+## Dark Mode Deserves Its Own Paragraph
+
+Also Chibuzo. He didn't just wire up a dark mode toggle — he built a whole dual-personality accent color system.
+
+In **light mode**: accent color is `red` (`rgba(221, 45, 74, 1)`).  
+In **dark mode**: accent color is `green` (`rgba(45, 221, 192, 1)`).
+
+Everything that's accent-colored — borders, text highlights, pulsing dots, hover states — switches between the two. CSS variables handle the transition so animations stay smooth. It's a small detail, but it's the kind of thing that makes the site feel considered rather than thrown together. That's his eye for design showing up in the code.
+
+## Something I Want to Say About Collaboration
+
+There's a version of this story where I white-knuckle through the home page alone, spend three months on it, get frustrated, and abandon the project. That version exists for a lot of side projects I've started.
+
+The reason this one shipped is Chibuzo. He got the ball rolling. He gave me something to build *from* rather than starting from a blank canvas. That matters more than people acknowledge in tech. We talk a lot about solo founders and lone builders, but most of the best work happens when someone says *"let me help you start."*
+
+So if you take anything from this post — let people help you. And if you can be the person who helps someone else get started, do it. You might just help them build something they're proud of.
+
+---
+
+*The site is open source on [GitHub](https://github.com/Ichie235) if you want to poke around the code. And if you're reading this on the portfolio itself — you're already there. Say hi in the [guestbook](/guestbook).*

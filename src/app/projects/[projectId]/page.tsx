@@ -9,17 +9,17 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import ProjectStack from "@/components/projects/ProjectStack";
 import ProjectOverview from "@/components/projects/ProjectOverview";
+import ProjectTimeline from "@/components/projects/ProjectTimeline";
 import { buildPageMetadata } from "@/lib/site";
 
 type Params = {
-  params: {
+  params: Promise<{
     projectId: ProjectSlug;
-  };
+  }>;
 };
 
-export function generateMetadata({
-  params: { projectId },
-}: Params): Metadata {
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { projectId } = await params;
   const projectDetails = project.find((item) => item.slug === projectId);
 
   if (!projectDetails) {
@@ -38,7 +38,8 @@ export function generateMetadata({
   });
 }
 
-const ProjectDetails = ({ params: { projectId } }: Params) => {
+const ProjectDetails = async ({ params }: Params) => {
+  const { projectId } = await params;
   const projectDetails: ProjectProps | undefined = project.find(
     (p) => p.slug === projectId
   );
@@ -83,6 +84,9 @@ const ProjectDetails = ({ params: { projectId } }: Params) => {
       </div>
       <div className="mt-5 px-5 md:px-28 lg:px-44">
         <ProjectStack projectName={projectDetails.slug} />
+      </div>
+      <div className="mt-5 mb-16 px-5 md:px-28 lg:px-44">
+        <ProjectTimeline slug={projectDetails.slug} />
       </div>
     </main>
   );
