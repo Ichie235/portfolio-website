@@ -341,7 +341,7 @@ export default function CommandPalette() {
             </ul>
 
             {/* Footer hint */}
-            <div className="flex items-center gap-4 border-t border-tr-black dark:border-tr-white px-4 py-2">
+            <div className="flex items-center gap-4 border-t border-tr-black dark:border-tr-white px-4 py-2 flex-wrap">
               <span className="flex items-center gap-1 font-varuna text-[10px] text-tr-black dark:text-tr-white">
                 <kbd className="rounded border border-tr-black dark:border-tr-white px-1">↑↓</kbd>
                 navigate
@@ -353,6 +353,12 @@ export default function CommandPalette() {
               <span className="flex items-center gap-1 font-varuna text-[10px] text-tr-black dark:text-tr-white">
                 <kbd className="rounded border border-tr-black dark:border-tr-white px-1">esc</kbd>
                 close
+              </span>
+              <span className="ml-auto flex items-center gap-1 font-varuna text-[10px] text-tr-black dark:text-tr-white">
+                <kbd className="rounded border border-tr-black dark:border-tr-white px-1">g</kbd>
+                <span>+</span>
+                <kbd className="rounded border border-tr-black dark:border-tr-white px-1">h/a/p/b/c</kbd>
+                quick nav
               </span>
             </div>
           </motion.div>

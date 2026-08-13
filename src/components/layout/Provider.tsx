@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { useState } from "react";
 import { CommandPaletteContext } from "@/hooks/useCommandPalette";
 import CommandPalette from "@/components/ui/CommandPalette";
+import KeyboardShortcuts from "@/components/ui/KeyboardShortcuts";
 
 type Props = {
   children: React.ReactNode;
@@ -17,6 +18,7 @@ const Provider = ({ children }: Props) => {
       <CommandPaletteContext.Provider value={{ open, setOpen }}>
         {children}
         <CommandPalette />
+        <KeyboardShortcuts />
       </CommandPaletteContext.Provider>
     </ThemeProvider>
   );
